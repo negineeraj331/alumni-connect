@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#5a5f62",
+                    "surface": "#fcf9f8",
+                    "primary-fixed": "#c8f230",
+                    "on-secondary-container": "#5e6367",
+                    "outline": "#757962",
+                    "surface-variant": "#e5e2e1",
+                    "background": "#fcf9f8",
+                    "on-tertiary-container": "#7b6767",
+                    "secondary-fixed-dim": "#c3c7cb",
+                    "on-primary-fixed-variant": "#3d4d00",
+                    "tertiary-fixed-dim": "#dac1c1",
+                    "surface-tint": "#516600",
+                    "on-secondary-fixed": "#171c1f",
+                    "secondary-fixed": "#dfe3e7",
+                    "primary-fixed-dim": "#add500",
+                    "primary-container": "#d4ff3e",
+                    "surface-bright": "#fcf9f8",
+                    "secondary-container": "#dce0e4",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f3f0ef",
+                    "outline-variant": "#c5c9ae",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#544243",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#261818",
+                    "inverse-primary": "#add500",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-dim": "#dcd9d9",
+                    "on-surface": "#1c1b1b",
+                    "tertiary-container": "#ffeaea",
+                    "on-surface-variant": "#444934",
+                    "error": "#ba1a1a",
+                    "on-background": "#1c1b1b",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "surface-container": "#f0eded",
+                    "on-secondary-fixed-variant": "#43474b",
+                    "tertiary": "#6d5a5a",
+                    "inverse-surface": "#313030",
+                    "surface-container-high": "#eae7e7",
+                    "tertiary-fixed": "#f7dcdc",
+                    "primary": "#516600",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-primary-fixed": "#171e00",
+                    "on-primary-container": "#5d7400"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "max-width": "1280px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "80px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-xl": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container-low docked full-width top-0 z-50 sticky">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface">
+                Alumni Connect
+            </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Features</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Directory</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Mentorship</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Events</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-secondary hover:text-primary transition-colors">dark_mode</button>
+<div class="h-10 w-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border border-outline-variant">
+<img class="h-full w-full object-cover" data-alt="A professional headshot of a smiling male alumni in a minimalist studio setting. The lighting is soft and natural, emphasizing a friendly and professional tone. The background is a clean, neutral grey that aligns with a high-end, modern minimalist UI. The image captures a sense of approachability and academic success." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMkFBiDO4325Naea5mUl3d7OQiWwTVmRRgrjGJYA1DOOStwYbxHtkL4TSi5qGhOj1QwgAdVai3UrZKlXooNGvJaCkH11As4ZXR7p-x6OVwj2tiumg0htZage7oVUlxEJwZbAA-sHqUwcB_jbBpgA7M-KWWtWPtW4Gs1E9cSopoo5mYx53GFL3riGO1ecatYKnQKzweZg9-EosPB8stoUwu6Fv4OjDxZScEeVARFspK72LgsvHn1oNc9La5bBxi4sFAEsP3Ntu0Gmut"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-max-width mx-auto px-margin-desktop py-12">
+<!-- Hero Section -->
+<section class="mb-12">
+<h1 class="text-headline-lg font-headline-lg text-on-surface mb-2">Welcome back, Alex</h1>
+<p class="text-body-lg font-body-lg text-secondary">Your network grew by 12 new alumni this week. What's on your agenda today?</p>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Main Content Area (8 Columns) -->
+<div class="col-span-12 lg:col-span-8 space-y-gutter">
+<!-- Quick Action Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-tertiary-container rounded-xl p-10 flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300 cursor-pointer group">
+<div class="bg-surface p-4 rounded-full mb-6 border border-outline-variant group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl">school</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Find a Mentor</h3>
+<p class="text-body-md font-body-md text-secondary">Connect with experienced professionals in your field.</p>
+</div>
+<div class="bg-[#fef9c3] rounded-xl p-10 flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300 cursor-pointer group">
+<div class="bg-surface p-4 rounded-full mb-6 border border-outline-variant group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl">calendar_month</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Browse Events</h3>
+<p class="text-body-md font-body-md text-secondary">Join webinars, local meetups, and networking nights.</p>
+</div>
+<div class="bg-secondary-container rounded-xl p-10 flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300 cursor-pointer group">
+<div class="bg-surface p-4 rounded-full mb-6 border border-outline-variant group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl">mail</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Check Messages</h3>
+<p class="text-body-md font-body-md text-secondary">Stay in touch with your alumni circle and mentors.</p>
+</div>
+<div class="bg-[#ffe4e6] rounded-xl p-10 flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300 cursor-pointer group">
+<div class="bg-surface p-4 rounded-full mb-6 border border-outline-variant group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl">person</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2">Update Profile</h3>
+<p class="text-body-md font-body-md text-secondary">Keep your professional journey and skills up to date.</p>
+</div>
+</div>
+<!-- Recent Activity Feed -->
+<div class="bg-surface-container-low rounded-xl p-8 border border-outline-variant">
+<div class="flex justify-between items-center mb-8">
+<h2 class="text-headline-md font-headline-md text-on-surface">Recent Activity</h2>
+<button class="text-label-sm font-label-sm text-primary hover:underline">View All</button>
+</div>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="h-10 w-10 rounded-full bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-container text-sm">person_add</span>
+</div>
+<div>
+<p class="text-body-md font-body-md text-on-surface"><strong>Sarah Jenkins</strong> (Class of '18) accepted your mentorship request.</p>
+<span class="text-label-sm font-label-sm text-secondary">2 hours ago</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="h-10 w-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container text-sm">event_available</span>
+</div>
+<div>
+<p class="text-body-md font-body-md text-on-surface">You registered for <strong>'Future of AI in Fintech'</strong> webinar.</p>
+<span class="text-label-sm font-label-sm text-secondary">Yesterday</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="h-10 w-10 rounded-full bg-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-container text-sm">celebration</span>
+</div>
+<div>
+<p class="text-body-md font-body-md text-on-surface"><strong>Alumni Connect</strong> celebrated 5 years of heritage today.</p>
+<span class="text-label-sm font-label-sm text-secondary">2 days ago</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar (4 Columns) -->
+<div class="col-span-12 lg:col-span-4 space-y-gutter">
+<!-- Upcoming Events Sidebar -->
+<div class="bg-surface-container-low rounded-xl p-8 border border-outline-variant">
+<h2 class="text-headline-md font-headline-md text-on-surface mb-6">Upcoming Events</h2>
+<div class="space-y-6">
+<div class="group cursor-pointer">
+<div class="bg-surface p-4 rounded-lg border border-outline-variant group-hover:border-primary transition-colors">
+<span class="text-label-sm font-label-sm text-primary uppercase block mb-2">Oct 24 • 6:00 PM</span>
+<h4 class="text-body-md font-bold text-on-surface mb-1">Global Alumni Gala</h4>
+<p class="text-label-sm font-label-sm text-secondary">Grand Hall &amp; Virtual</p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="bg-surface p-4 rounded-lg border border-outline-variant group-hover:border-primary transition-colors">
+<span class="text-label-sm font-label-sm text-primary uppercase block mb-2">Nov 02 • 10:00 AM</span>
+<h4 class="text-body-md font-bold text-on-surface mb-1">Product Design Workshop</h4>
+<p class="text-label-sm font-label-sm text-secondary">Online Session</p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="bg-surface p-4 rounded-lg border border-outline-variant group-hover:border-primary transition-colors">
+<span class="text-label-sm font-label-sm text-primary uppercase block mb-2">Nov 15 • 5:30 PM</span>
+<h4 class="text-body-md font-bold text-on-surface mb-1">London Chapter Meetup</h4>
+<p class="text-label-sm font-label-sm text-secondary">The Shard, London</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-3 bg-primary text-on-primary font-bold rounded-lg hover:opacity-90 transition-opacity">
+                        View Calendar
+                    </button>
+</div>
+<!-- Suggested Connections -->
+<div class="bg-surface-container-low rounded-xl p-8 border border-outline-variant">
+<h2 class="text-headline-md font-headline-md text-on-surface mb-6">People you may know</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<img class="h-12 w-12 rounded-full object-cover" data-alt="A portrait of a cheerful female professional with long dark hair, wearing a white blazer. The setting is a minimalist office with large windows and soft natural lighting. The mood is professional yet warm and accessible, fitting a community-driven alumni platform with a clean design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7ml2PT8c8YoHlAoh049Zp5WN-BjV36NMPzcGm0oQTleoiK9CLxIDxCneiPcrI6II5oFfouFSaY54-7aZyBe62_3X4dDyDpxowBJG_dCwyXghDSTnm4pIajWwkhiT5shF02Fi0A3nKvFoGr8WXIq6lh1ado-jFLdyuvNm7aDL7seJcevYolb6MTPdl4d154aeepU864HNSWKkwbrafZLLbTMPH2lPxp1SMdaKxp_DI5sazRgRWMP8lzQYW7pD5OzNuU8yElw-jOJhM"/>
+<div class="flex-1">
+<p class="text-label-sm font-bold text-on-surface">Maya Chen</p>
+<p class="text-label-sm font-label-sm text-secondary">UX Lead at DesignCo</p>
+</div>
+<button class="material-symbols-outlined text-primary">person_add</button>
+</div>
+<div class="flex items-center gap-3">
+<img class="h-12 w-12 rounded-full object-cover" data-alt="A portrait of a smiling young man in a smart casual sweater. The lighting is bright and even, set against a blurred background of a modern academic library. The image represents a recent graduate who is active in the alumni community, reflecting optimism and professional potential." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSzbOxj583EeFwDQBuo8uGmCntp-edAtaqTdOV5ph4dkJK6156Jo1BPKfMmztJvAkGFodrFpPqJrsGLFSk_pX_x-jMkIkiIeMv8YIB-52lfSOxOT21c4Rko-YxcZ4Pfg_UgxzR-iKElGSy5kq5XcKz2OWGO5yhsl96VWGTyTcMRbYozwLw95jAmNAxZhOX6iTUovn4b3kkjEfbkZMsDM8k5biiLQYYBkjGB_hPpoESfkv-Mq6McSaw5RR4iT1HUltdzrcUiP8Ku8_c"/>
+<div class="flex-1">
+<p class="text-label-sm font-bold text-on-surface">David Miller</p>
+<p class="text-label-sm font-label-sm text-secondary">Software Architect</p>
+</div>
+<button class="material-symbols-outlined text-primary">person_add</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 max-w-max-width mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface mb-4 text-center md:text-left">
+                    Alumni Connect
+                </div>
+<p class="text-body-md font-body-md text-secondary max-w-xs text-center md:text-left">
+                    © 2024 Alumni Connect. Building a modern heritage.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 text-label-sm font-label-sm" href="#">About Us</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 text-label-sm font-label-sm" href="#">Mentors</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 text-label-sm font-label-sm" href="#">Privacy Policy</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 text-label-sm font-label-sm" href="#">Contact</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 text-label-sm font-label-sm" href="#">Community Guidelines</a>
+</div>
+</div>
+</footer>
+<!-- Floating Action Button - Mobile Only context -->
+<button class="md:hidden fixed bottom-6 right-6 h-14 w-14 bg-primary-fixed text-on-primary-fixed rounded-full shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined">add</span>
+</button>
+</body></html>

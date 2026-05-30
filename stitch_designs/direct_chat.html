@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Direct Chat | Alumni Connect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#444934",
+                        "tertiary-fixed": "#f7dcdc",
+                        "outline": "#757962",
+                        "secondary-fixed-dim": "#c3c7cb",
+                        "secondary-container": "#dce0e4",
+                        "outline-variant": "#c5c9ae",
+                        "on-secondary-fixed": "#171c1f",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#add500",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary-fixed": "#171e00",
+                        "tertiary-container": "#ffeaea",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-background": "#1c1b1b",
+                        "surface-tint": "#516600",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary-container": "#d4ff3e",
+                        "surface-bright": "#fcf9f8",
+                        "on-primary-fixed-variant": "#3d4d00",
+                        "on-primary": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "inverse-primary": "#add500",
+                        "surface-container": "#f0eded",
+                        "on-primary-container": "#5d7400",
+                        "background": "#fcf9f8",
+                        "tertiary": "#6d5a5a",
+                        "on-secondary-container": "#5e6367",
+                        "secondary": "#5a5f62",
+                        "on-surface": "#1c1b1b",
+                        "primary-fixed": "#c8f230",
+                        "on-tertiary-container": "#7b6767",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed": "#dfe3e7",
+                        "primary": "#516600",
+                        "on-secondary-fixed-variant": "#43474b",
+                        "tertiary-fixed-dim": "#dac1c1",
+                        "on-tertiary-fixed": "#261818",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary-fixed-variant": "#544243"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chat-scrollbar::-webkit-scrollbar { width: 4px; }
+        .chat-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .chat-scrollbar::-webkit-scrollbar-thumb { background: #c5c9ae; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container-low border-b border-outline-variant/30 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface">
+                Alumni Connect
+            </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md transition-colors duration-200" href="#">Features</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md transition-colors duration-200" href="#">Directory</a>
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary font-bold pb-1 transition-colors duration-200" href="#">Mentorship</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md transition-colors duration-200" href="#">Events</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 text-on-surface hover:bg-surface-variant rounded-full transition-colors">dark_mode</button>
+<button class="hidden md:block text-secondary hover:text-on-surface font-label-sm">Login</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold text-label-sm hover:scale-95 transition-transform duration-150">Get Started</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow flex flex-col max-w-max-width w-full mx-auto px-margin-desktop py-8">
+<!-- Chat Layout Container -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-[calc(100vh-250px)] min-h-[600px]">
+<!-- Sidebar: Conversations List -->
+<aside class="hidden md:flex md:col-span-4 flex-col bg-surface-container-low rounded-xl border border-outline-variant/50 overflow-hidden">
+<div class="p-6 border-b border-outline-variant/50">
+<h2 class="text-headline-md font-headline-md text-on-surface">Messages</h2>
+<div class="mt-4 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface border border-outline rounded-lg text-body-md focus:ring-2 focus:ring-primary focus:outline-none" placeholder="Search connections..." type="text"/>
+</div>
+</div>
+<div class="flex-grow overflow-y-auto chat-scrollbar">
+<!-- Conversation Item Active -->
+<div class="flex items-center gap-4 p-4 bg-primary-container/20 border-l-4 border-primary cursor-pointer">
+<img class="w-12 h-12 rounded-full object-cover border border-outline-variant" data-alt="A professional headshot of a friendly female software engineer in her late 20s, wearing a simple navy blouse against a soft-focus office background. The lighting is bright and airy, consistent with a clean and modern minimalist design system. The image conveys approachable professionalism and academic achievement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9fypRao5tWhxCPubWX7Y8YJlXXXV17Na7qLRHbPmmYyFTDWs_oyfg10xbq-smuCI1HMrkUHTF7xDZZZ9DWuKuwU8FHIZ-ibyrIh-3vxFg4KQ41O4-eGfHK5qPpIf7XXJIEGU-dpMkepq1qmzQnsjHRAz5adJiVyrP5i6ddTDHcqUDbpFbw_AhdfOeSFOEKse-a-VfxyCmgeSemxKyRKN7LgpGwtWbY8SPsKKv_6uQ8DnUCpVhnOOKlEd_fDo8nmyplDBGfr2wTJ2N"/>
+<div class="flex-grow">
+<div class="flex justify-between">
+<span class="font-bold text-on-surface">Elena Rodriguez</span>
+<span class="text-label-sm text-secondary">2m</span>
+</div>
+<p class="text-body-md text-on-surface-variant truncate">That project sounds fascinating! I'd love to help...</p>
+</div>
+</div>
+<!-- Conversation Item -->
+<div class="flex items-center gap-4 p-4 hover:bg-surface-container-high transition-colors cursor-pointer">
+<img class="w-12 h-12 rounded-full object-cover border border-outline-variant" data-alt="A portrait of a mature male professional with a warm smile, wearing a grey sweater and spectacles, set in a bright library environment. The aesthetic is high-key with soft natural lighting and generous whitespace. The image represents a seasoned mentor figure in a professional and academic networking platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9C4a4ML844i5AjsJ3TJV0aZwcqf9L2ya6Qz4XM-8ZdENWoBa_oRWAfuEEhp3WWF-Ebu6GiwwidT42yNzw5GhEaeu1SAOy41lBQXdWK20K-YS3KzAwTszTfpNVL90NsIzWqoATW865Y-xUszZGTBrqfQjTdV7WZbQPo_oXfEpIOgES6EF3ueCL3Lzt4SjJbFqgQNA40BzvJspEB6F66zF93cIyi4IPMntKrGV9KvyfTNnPITj5iDURFCPvHK77TmjWykJofOF4BM4c"/>
+<div class="flex-grow">
+<div class="flex justify-between">
+<span class="font-bold text-on-surface">Dr. Marcus Chen</span>
+<span class="text-label-sm text-secondary">1h</span>
+</div>
+<p class="text-body-md text-secondary truncate">Regarding the research paper on AI ethics...</p>
+</div>
+</div>
+<!-- Conversation Item -->
+<div class="flex items-center gap-4 p-4 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold">JW</div>
+<div class="flex-grow">
+<div class="flex justify-between">
+<span class="font-bold text-on-surface">James Wilson</span>
+<span class="text-label-sm text-secondary">Yesterday</span>
+</div>
+<p class="text-body-md text-secondary truncate">Are you attending the alumni mixer next week?</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Chat Interface -->
+<section class="col-span-1 md:col-span-8 flex flex-col bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden">
+<!-- Chat Header -->
+<header class="flex items-center justify-between p-4 border-b border-outline-variant/30">
+<div class="flex items-center gap-4">
+<button class="md:hidden material-symbols-outlined text-on-surface">arrow_back</button>
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="A professional headshot of Elena Rodriguez, a young woman with a welcoming expression, in a high-quality light-mode photography style. The background is a clean, bright architectural space with soft shadows, evoking a sense of modern professionalism and high-value networking." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx543TAo-zrVeARvhDagXl-OZbu4ifZQDvRqDhvj1CIzDX8vFQrohDBN8B8gpsmLRhZZly9h-e-nh_P_teDRFu89DiSTlezIOix0cQoVU7mAI9RXikkFIh5ZfYXUgQu4LDjlDr0j3fuekm3L-ERaVCaSJwh2Fxv_axKkZ5HdT_ZQ4bs_Jgl7VgjgntFq1H1xFghTJU0cBLMhrqUdlWoxVzw1Nr8b15gT5f5IWueJ1pViOcWM9sLYi304cwLucFKx1RuLbAJLGF-Bzg"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-primary-fixed-dim rounded-full border-2 border-white"></div>
+</div>
+<div>
+<h3 class="font-bold text-on-surface text-body-lg">Elena Rodriguez</h3>
+<p class="text-label-sm text-primary font-semibold">Active now</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-container rounded-full text-secondary material-symbols-outlined">video_call</button>
+<button class="p-2 hover:bg-surface-container rounded-full text-secondary material-symbols-outlined">info</button>
+</div>
+</header>
+<!-- Messages Canvas -->
+<div class="flex-grow overflow-y-auto p-6 space-y-6 chat-scrollbar bg-surface-container-low/30">
+<!-- Date Divider -->
+<div class="flex justify-center">
+<span class="px-4 py-1 bg-surface-container text-label-sm text-secondary rounded-full">Today</span>
+</div>
+<!-- Received Message -->
+<div class="flex items-end gap-3 max-w-[80%]">
+<img class="w-8 h-8 rounded-full object-cover mb-2" data-alt="Small thumbnail of Elena Rodriguez for chat bubbles, showing her friendly face in a professional, bright setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaacFeLBdjk8mpRvIz8vEpupFKpbviETREyTOxMvlSpZViFJwrJdLHro9ua72rh__5y89r_RWRDvkjps85S8FyLi027lPjzFaP9pUimndeN72m5-dwx1AbjNqdarfYN8SbvaFjN5n0eHvwvcOnT5a9h_eA2pzasp56GjyhIuZww6h_cRsGSiyu9wXVX5g8G525-pZXDRhHvvIJBFo3vsCZzVx9cZlFQq_FXYEorazh6Zbl959VSuHJE83DvSdn2rUkw4xNJ6Y9CAJM"/>
+<div class="space-y-1">
+<div class="bg-surface-container-high text-on-surface px-4 py-3 rounded-2xl rounded-bl-none">
+<p class="text-body-md">Hi there! I saw your recent post about the tech mentoring program. I'm really interested in your approach to UI design systems.</p>
+</div>
+<span class="text-[10px] text-secondary ml-1 uppercase font-bold tracking-wider">10:42 AM</span>
+</div>
+</div>
+<!-- Sent Message -->
+<div class="flex items-end gap-3 max-w-[80%] ml-auto flex-row-reverse">
+<div class="space-y-1 flex flex-col items-end">
+<div class="bg-primary text-on-primary px-4 py-3 rounded-2xl rounded-br-none">
+<p class="text-body-md">Thanks Elena! I've been working on creating a more 'friendly-professional' vibe. I'd love to chat more about it. Are you free for a quick call this week?</p>
+</div>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-[10px] text-secondary uppercase font-bold tracking-wider">10:45 AM</span>
+<span class="material-symbols-outlined text-[12px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Received Message -->
+<div class="flex items-end gap-3 max-w-[80%]">
+<img class="w-8 h-8 rounded-full object-cover mb-2" data-alt="Small thumbnail of Elena Rodriguez for chat bubbles, showing her friendly face in a professional, bright setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJlzuJqVth5YNVIWh7HdPF8qIEG7SlYVgCoFmwGSgRxy8uH3eGv0M4xC2aQvTciPaWHnFDT5AKiubLI6NB8e-M_raY4t-qXhOX3zocprWh1xaaSDrqi2PdgYkF5ksnLNKBvhO0mEKCber_tagS33eSENimnRAUV6_gYeVkiV9zxE7VmRBH6lAShduksD1PJTSFMPF8AofuHbKNiSZSJPW6YLEPlg72-0AvaTWrA9RSRhilzzlEJN59FcoK7Hm3xEhs5k3Jjw9uNwXr"/>
+<div class="space-y-1">
+<div class="bg-surface-container-high text-on-surface px-4 py-3 rounded-2xl rounded-bl-none">
+<p class="text-body-md">That project sounds fascinating! I'd love to help out with the documentation or even some component testing if you need a fresh set of eyes. I'm available Thursday afternoon.</p>
+</div>
+<span class="text-[10px] text-secondary ml-1 uppercase font-bold tracking-wider">11:12 AM</span>
+</div>
+</div>
+</div>
+<!-- Input Field Area -->
+<footer class="p-6 border-t border-outline-variant/30">
+<div class="flex items-end gap-3 bg-surface border border-outline rounded-xl p-2 focus-within:ring-2 focus-within:ring-primary transition-all">
+<button class="p-2 text-secondary hover:text-primary material-symbols-outlined">add_circle</button>
+<textarea class="flex-grow bg-transparent border-none focus:ring-0 text-body-md py-2 px-2 resize-none max-h-32" placeholder="Type your message..." rows="1"></textarea>
+<div class="flex items-center gap-2">
+<button class="p-2 text-secondary hover:text-primary material-symbols-outlined">sentiment_satisfied</button>
+<button class="bg-primary-container text-on-primary-container p-3 rounded-lg hover:scale-95 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+</footer>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline mt-12">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 max-w-max-width mx-auto gap-8">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface">
+                Alumni Connect
+            </div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 font-label-sm" href="#">About Us</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 font-label-sm" href="#">Mentors</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 font-label-sm" href="#">Privacy Policy</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 font-label-sm" href="#">Contact</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 font-label-sm" href="#">Community Guidelines</a>
+</div>
+<div class="text-label-sm text-on-secondary-fixed-variant">
+                © 2024 Alumni Connect. Building a modern heritage.
+            </div>
+</div>
+</footer>
+</body></html>

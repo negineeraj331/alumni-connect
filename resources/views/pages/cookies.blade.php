@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cookie Policy | Alumni Connect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fcf9f8",
+                        "inverse-on-surface": "#f3f0ef",
+                        "secondary": "#5a5f62",
+                        "on-background": "#1c1b1b",
+                        "outline-variant": "#c5c9ae",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed-dim": "#c3c7cb",
+                        "on-secondary": "#ffffff",
+                        "background": "#fcf9f8",
+                        "on-surface-variant": "#444934",
+                        "tertiary-fixed": "#f7dcdc",
+                        "surface-tint": "#516600",
+                        "outline": "#757962",
+                        "on-tertiary-fixed-variant": "#544243",
+                        "inverse-surface": "#313030",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#6d5a5a",
+                        "inverse-primary": "#add500",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#dce0e4",
+                        "surface-container": "#f0eded",
+                        "on-tertiary-container": "#7b6767",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#eae7e7",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#5e6367",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e5e2e1",
+                        "secondary-fixed": "#dfe3e7",
+                        "surface-bright": "#fcf9f8",
+                        "on-primary-fixed": "#171e00",
+                        "on-primary-container": "#5d7400",
+                        "primary-fixed": "#c8f230",
+                        "primary": "#516600",
+                        "on-primary-fixed-variant": "#3d4d00",
+                        "tertiary-fixed-dim": "#dac1c1",
+                        "primary-container": "#d4ff3e",
+                        "on-tertiary-fixed": "#261818",
+                        "tertiary-container": "#ffeaea",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#171c1f",
+                        "on-secondary-fixed-variant": "#43474b",
+                        "primary-fixed-dim": "#add500",
+                        "on-surface": "#1c1b1b",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-dim": "#dcd9d9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "max-width": "1280px",
+                        "margin-desktop": "80px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .policy-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .policy-content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-surface dark:bg-[#12140e] text-on-surface dark:text-[#e3e3e3] font-body-md antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full bg-surface dark:bg-[#1a1c16] border-b border-outline-variant dark:border-[#444934]">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-[1280px] mx-auto">
+<a href="{{ route('welcome') }}" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+    <div class="bg-primary-container p-1 rounded-lg">
+        <span class="material-symbols-outlined text-on-primary-container" data-icon="school">school</span>
+    </div>
+    <span class="text-headline-md font-bold tracking-tight dark:text-white">Alumni Connect</span>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-secondary dark:text-[#a0a5a8] hover:text-on-surface font-body-md transition-colors duration-200" href="{{ route('register') }}">Features</a>
+<a class="text-secondary dark:text-[#a0a5a8] hover:text-on-surface font-body-md transition-colors duration-200" href="{{ route('register') }}">Directory</a>
+<a class="text-secondary dark:text-[#a0a5a8] hover:text-on-surface font-body-md transition-colors duration-200" href="{{ route('register') }}">Mentorship</a>
+<a class="text-secondary dark:text-[#a0a5a8] hover:text-on-surface font-body-md transition-colors duration-200" href="{{ route('register') }}">Events</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="{{ route('login') }}" class="hidden md:block text-secondary dark:text-[#a0a5a8] hover:text-on-surface font-body-md transition-transform active:scale-95">Login</a>
+<a href="{{ route('register') }}" class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold text-label-sm hover:opacity-90 transition-all active:scale-95">Get Started</a>
+<button id="themeToggle" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container dark:hover:bg-gray-800 transition-all dark:shadow-[0_0_15px_rgba(212,255,62,0.3)]">
+    <span class="material-symbols-outlined dark:text-primary-container" id="themeIcon">dark_mode</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-24 pb-24 px-4 md:px-0">
+<!-- Hero Section -->
+<section class="relative pt-16 pb-16 mb-16 overflow-hidden bg-surface-container-low dark:bg-[#1a1c21] rounded-b-[3rem] border-b border-outline-variant dark:border-[#444934]">
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-1/4 left-10 w-40 h-40 bg-primary-container/30 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-20 w-56 h-56 bg-primary/20 dark:bg-primary-container/20 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-[800px] mx-auto text-center relative z-10">
+<div class="mb-10 flex justify-center">
+<div class="relative w-48 h-48 md:w-64 md:h-64 rounded-full bg-primary-container flex items-center justify-center overflow-hidden dark:shadow-[0_0_20px_rgba(212,255,62,0.15)]">
+<img class="w-3/4 h-3/4 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFoJgR2q9K5yC7nF67HjUpxJ1l3X4Z3k7T5W7uK8hR9J7i3s9tF5w6K7l8R8j7y6t5e4d3c2b1a0"/>
+</div>
+</div>
+<h1 class="font-headline-lg text-headline-lg mb-6 text-on-surface dark:text-[#e3e3e3]">Cookie Policy</h1>
+<p class="font-body-lg text-body-lg text-secondary dark:text-[#a0a5a8] max-w-2xl mx-auto">
+                We use cookies and similar technologies to remember your preferences, secure your sessions, and measure platform engagement.
+            </p>
+<div class="mt-8 flex justify-center gap-2 items-center text-label-sm text-secondary dark:text-[#a0a5a8]">
+<span class="material-symbols-outlined text-[18px]" data-icon="history">history</span>
+<span>Last Updated: May 20, 2026</span>
+</div>
+    </div>
+</section>
+<!-- Content Sections -->
+<article class="max-w-[800px] mx-auto policy-content bg-surface-container-lowest dark:bg-[#12140e] md:p-12 p-6 rounded-[2.5rem] shadow-xl border border-outline-variant dark:border-[#444934] dark:shadow-[0_0_20px_rgba(212,255,62,0.05)] relative z-20 -mt-10">
+<section class="mb-16 border-l-2 border-primary-container pl-8">
+<h2 class="font-headline-md text-headline-md mb-6 text-on-surface dark:text-[#e3e3e3] flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="cookie">cookie</span>
+                    What are Cookies?
+                </h2>
+<p class="text-body-md mb-4 dark:text-[#a0a5a8]">
+                    Cookies are small text files placed on your computer or mobile device by websites that you visit. They are widely used to make websites work more efficiently, improve the browsing experience, and provide usage analytics to website owners.
+                </p>
+</section>
+<section class="mb-16 border-l-2 border-outline-variant dark:border-[#444934] pl-8">
+<h2 class="font-headline-md text-headline-md mb-6 text-on-surface dark:text-[#e3e3e3] flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="settings">settings</span>
+                    How We Use Cookies
+                </h2>
+<p class="text-body-md mb-4 dark:text-[#a0a5a8]">
+                    Alumni Connect uses cookies to provide dynamic, secure, and personalized interactions:
+                </p>
+<ul class="text-body-md text-secondary dark:text-[#a0a5a8]">
+<li><strong>Authentication & Sessions:</strong> To keep you logged in as you navigate the platform, ensuring your secure sessions remain active.</li>
+<li><strong>Preferences:</strong> To remember your user preferences, such as your chosen theme (light or dark mode) and UI layouts.</li>
+<li><strong>Security:</strong> To verify your identity and protect against malicious activity or CSRF attacks.</li>
+<li><strong>Analytics:</strong> To collect anonymous performance data and determine popular pages or features.</li>
+</ul>
+</section>
+<!-- Interactive Callout Card -->
+<div class="bg-surface-container-low dark:bg-[#1a1c16] p-10 rounded-xl mb-16 border border-outline-variant dark:border-[#444934] dark:shadow-[0_0_20px_rgba(212,255,62,0.15)]">
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface dark:text-[#e3e3e3]">Your Privacy, Your Control</h3>
+<p class="text-body-md text-secondary dark:text-[#a0a5a8] mb-6">
+                    We value your privacy. Alumni Connect does not use tracking cookies for third-party behavioral advertising. The cookies set on our platform are purely functional, serving to run our authentication, secure your connection, and store your preferred dashboard states.
+                </p>
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed" data-icon="no_accounts">no_accounts</span>
+</div>
+<span class="text-label-sm font-bold text-on-surface-variant dark:text-[#c4c8b9]">Zero Third-Party Advertising Cookies</span>
+</div>
+</div>
+<section class="mb-16 border-l-2 border-outline-variant dark:border-[#444934] pl-8">
+<h2 class="font-headline-md text-headline-md mb-6 text-on-surface dark:text-[#e3e3e3] flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="list_alt">list_alt</span>
+                    Types of Cookies We Use
+                </h2>
+<p class="text-body-md mb-4 dark:text-[#a0a5a8]">
+                    The cookies utilized on our site fall into these categories:
+                </p>
+<ul class="text-body-md text-secondary dark:text-[#a0a5a8]">
+<li><strong>Strictly Necessary Cookies:</strong> Essential for you to log in and use secure services. Without these cookies, features like the messaging portal or matching dashboards cannot function.</li>
+<li><strong>Functionality Cookies:</strong> Used to recognize you when you return to our website. This enables us to personalize our content and remember your theme choice.</li>
+<li><strong>Performance & Analytics Cookies:</strong> Allow us to monitor traffic and count page visits so we can measure and improve our site's loading speeds and navigation.</li>
+</ul>
+</section>
+<section class="mb-16 border-l-2 border-primary-container pl-8">
+<h2 class="font-headline-md text-headline-md mb-6 text-on-surface dark:text-[#e3e3e3] flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="toggle_off">toggle_off</span>
+                    Managing Your Cookie Choices
+                </h2>
+<p class="text-body-md mb-6 text-secondary dark:text-[#a0a5a8]">
+                    Most browsers allow you to refuse or accept cookies through their settings menu. If you choose to disable all cookies (including strictly necessary ones), please note that you may experience issues logging in, and some portions of the Alumni Connect platform may not load or function correctly.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 bg-surface dark:bg-[#12140e] rounded-lg border border-outline dark:border-[#757962]">
+<span class="text-label-sm block mb-1 font-bold text-primary">Safari</span>
+<span class="text-body-md dark:text-[#e3e3e3]">Preferences &gt; Privacy &gt; Block all cookies</span>
+</div>
+<div class="p-4 bg-surface dark:bg-[#12140e] rounded-lg border border-outline dark:border-[#757962]">
+<span class="text-label-sm block mb-1 font-bold text-primary">Chrome</span>
+<span class="text-body-md dark:text-[#e3e3e3]">Settings &gt; Privacy &amp; Security &gt; Third-party cookies</span>
+</div>
+</div>
+</section>
+<!-- Contact CTA -->
+<section class="text-center py-12 border-t border-outline-variant dark:border-[#444934] mt-24">
+<h2 class="font-headline-md text-headline-md mb-4 dark:text-[#e3e3e3]">Have questions about our cookie usage?</h2>
+<p class="text-body-md text-secondary dark:text-[#a0a5a8] mb-8">We are happy to answer any questions you have about tracking, sessions, or privacy safeguards.</p>
+<a class="inline-flex items-center gap-2 border-2 border-on-background dark:border-[#e3e3e3] px-8 py-3 rounded-full font-bold hover:bg-on-background hover:text-surface dark:hover:bg-[#e3e3e3] dark:hover:text-[#12140e] transition-all active:scale-95" href="{{ route('contact') }}">
+                    Contact Support Team
+                    <span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+</section>
+</article>
+</main>
+<footer class="bg-surface-container-low dark:bg-[#20241b] border-t border-outline-variant dark:border-[#444934]">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center w-full px-margin-desktop py-12 max-w-max-width mx-auto gap-8">
+<div class="flex flex-col gap-4">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-white flex items-center gap-2">
+    <div class="bg-primary-container p-1 rounded-lg flex items-center justify-center">
+    <span class="material-symbols-outlined text-on-primary-container" data-icon="school">school</span>
+</div>
+    Alumni Connect
+</div>
+<p class="text-secondary dark:text-[#a0a5a8] text-body-md max-w-xs">© 2026 Alumni Connect. Building a modern heritage.</p>
+</div>
+<div class="flex flex-wrap gap-x-12 gap-y-4">
+<a class="{{ request()->routeIs('about') ? 'text-primary font-bold underline' : 'text-secondary dark:text-[#a0a5a8] hover:text-on-surface hover:underline' }} transition-all duration-200 text-body-md font-body-md" href="{{ route('about') }}">About Us</a>
+<a class="{{ request()->routeIs('privacy') ? 'text-primary font-bold underline' : 'text-secondary dark:text-[#a0a5a8] hover:text-on-surface hover:underline' }} transition-all duration-200 text-body-md font-body-md" href="{{ route('privacy') }}">Privacy Policy</a>
+<a class="{{ request()->routeIs('terms') ? 'text-primary font-bold underline' : 'text-secondary dark:text-[#a0a5a8] hover:text-on-surface hover:underline' }} transition-all duration-200 text-body-md font-body-md" href="{{ route('terms') }}">Terms of Service</a>
+<a class="{{ request()->routeIs('cookies') ? 'text-primary font-bold underline' : 'text-secondary dark:text-[#a0a5a8] hover:text-on-surface hover:underline' }} transition-all duration-200 text-body-md font-body-md" href="{{ route('cookies') }}">Cookie Policy</a>
+<a class="{{ request()->routeIs('contact') ? 'text-primary font-bold underline' : 'text-secondary dark:text-[#a0a5a8] hover:text-on-surface hover:underline' }} transition-all duration-200 text-body-md font-body-md" href="{{ route('contact') }}">Contact</a>
+<a class="{{ request()->routeIs('guidelines') ? 'text-primary font-bold underline' : 'text-secondary dark:text-[#a0a5a8] hover:text-on-surface hover:underline' }} transition-all duration-200 text-body-md font-body-md" href="{{ route('guidelines') }}">Community Guidelines</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll observer for subtle header shadow
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-sm');
+                if(!document.documentElement.classList.contains('dark')) {
+                    header.classList.replace('bg-surface', 'bg-surface/90');
+                }
+                header.style.backdropFilter = 'blur(8px)';
+            } else {
+                header.classList.remove('shadow-sm');
+                if(!document.documentElement.classList.contains('dark')) {
+                    header.classList.replace('bg-surface/90', 'bg-surface');
+                }
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+<script>
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark');
+        if(themeIcon) themeIcon.textContent = 'light_mode';
+    } else {
+        html.classList.remove('dark');
+        if(themeIcon) themeIcon.textContent = 'dark_mode';
+    }
+
+    if(themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            if (html.classList.contains('dark')) {
+                localStorage.theme = 'dark';
+                themeIcon.textContent = 'light_mode';
+            } else {
+                localStorage.theme = 'light';
+                themeIcon.textContent = 'dark_mode';
+            }
+        });
+    }
+</script>
+</body>
+</html>

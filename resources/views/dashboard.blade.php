@@ -1,0 +1,13 @@
+@if(Auth::check())
+    @if(Auth::user()->hasRole('faculty'))
+        @include('dashboards.faculty')
+    @elseif(Auth::user()->hasRole('organizer'))
+        @include('dashboards.organizer')
+    @elseif(Auth::user()->hasRole('student'))
+        @include('dashboards.student')
+    @elseif(Auth::user()->hasRole('mentor'))
+        @include('dashboards.alumni')
+    @else
+        @include('dashboards.alumni')
+    @endif
+@endif

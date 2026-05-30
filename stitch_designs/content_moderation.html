@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Content Moderation | Alumni Connect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#444934",
+                        "tertiary-fixed": "#f7dcdc",
+                        "outline": "#757962",
+                        "secondary-fixed-dim": "#c3c7cb",
+                        "secondary-container": "#dce0e4",
+                        "outline-variant": "#c5c9ae",
+                        "on-secondary-fixed": "#171c1f",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#add500",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary-fixed": "#171e00",
+                        "tertiary-container": "#ffeaea",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-background": "#1c1b1b",
+                        "surface-tint": "#516600",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary-container": "#d4ff3e",
+                        "surface-bright": "#fcf9f8",
+                        "on-primary-fixed-variant": "#3d4d00",
+                        "on-primary": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "inverse-primary": "#add500",
+                        "surface-container": "#f0eded",
+                        "on-primary-container": "#5d7400",
+                        "background": "#fcf9f8",
+                        "tertiary": "#6d5a5a",
+                        "on-secondary-container": "#5e6367",
+                        "secondary": "#5a5f62",
+                        "on-surface": "#1c1b1b",
+                        "primary-fixed": "#c8f230",
+                        "on-tertiary-container": "#7b6767",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed": "#dfe3e7",
+                        "primary": "#516600",
+                        "on-secondary-fixed-variant": "#43474b",
+                        "tertiary-fixed-dim": "#dac1c1",
+                        "on-tertiary-fixed": "#261818",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary-fixed-variant": "#544243"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="bg-surface dark:bg-surface-container-low flex justify-between items-center w-full px-margin-desktop py-4 max-w-max-width mx-auto sticky top-0 z-50">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface">Alumni Connect</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Features</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Directory</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Mentorship</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Events</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 text-on-surface hover:bg-surface-container transition-colors rounded-full" data-icon="dark_mode">dark_mode</button>
+<button class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md px-4 py-2 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform duration-150">Login</button>
+<button class="bg-primary-container text-on-primary-container font-bold px-6 py-2 rounded-full active:scale-95 transition-transform duration-150">Get Started</button>
+</div>
+</nav>
+<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Header Section -->
+<header class="mb-12">
+<h1 class="text-headline-lg font-headline-lg mb-4 text-on-surface">Review Flagged Content</h1>
+<p class="text-body-lg font-body-lg text-secondary max-w-2xl">
+                Maintain the integrity of the Alumni Connect community. Carefully review reported posts and decide on appropriate actions based on community guidelines.
+            </p>
+</header>
+<!-- Moderation Stats / Filters -->
+<div class="flex flex-wrap gap-4 mb-10 items-center justify-between">
+<div class="flex gap-2">
+<button class="px-6 py-2 bg-primary-container text-on-primary-container font-bold rounded-full text-label-sm font-label-sm border-2 border-primary-container">All Reports (14)</button>
+<button class="px-6 py-2 bg-surface text-secondary border border-outline rounded-full text-label-sm font-label-sm hover:bg-surface-container transition-colors">Potential Spam</button>
+<button class="px-6 py-2 bg-surface text-secondary border border-outline rounded-full text-label-sm font-label-sm hover:bg-surface-container transition-colors">Harassment</button>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-secondary">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+                Last activity: 2 hours ago
+            </div>
+</div>
+<!-- Moderation Grid (Asymmetric) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Flagged Post 1 -->
+<div class="md:col-span-8 bg-tertiary-container p-10 rounded-xl flex flex-col justify-between border border-outline-variant">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Avatar" data-alt="A professional headshot of a middle-aged man with short hair and a clean-shaven face, wearing a dark navy blazer over a crisp white shirt. The background is a soft-focus office environment with warm morning sunlight streaming through a window, creating a friendly and trustworthy atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoaFFeeJTrn7FI4KyPiLPl4a_2F0lJsaVfFFw563qmWclxOyINwgfEj-6JfPS0kX9vj2jUc4lXWdpIz7I0HWet5YVVwiAX6TiwMTE6UrBR8xaVTCulkzQPtTc-iYFghhCKLpwNUo7WVzAcn2vRTxExQiewaX7wCg9iv91c1kKUdP3C4Vdl2FGIc4ZoE88AOAvE04huJaxa6-fSix6fW0GDl-sfJqhgfuN_t6zAvpDFjzMT-c1nGCwcu8o6D7losKdG8ThN4bRRHkXi"/>
+</div>
+<div>
+<h3 class="text-headline-md font-headline-md text-on-surface">Marcus Chen</h3>
+<p class="text-label-sm font-label-sm text-secondary">Class of 2012 • Engineering</p>
+</div>
+</div>
+<div class="px-3 py-1 bg-error-container text-on-error-container rounded-full text-label-sm font-label-sm">
+                            Flagged for: Misleading Content
+                        </div>
+</div>
+<p class="text-body-lg font-body-lg text-on-surface mb-8">
+                        "Hey everyone! I found a secret way to bypass the alumni donation system and get premium access to all research papers for free. Just click this link and enter your student ID: <span class="text-primary underline">bit.ly/alumni-hacks-2024</span>. Don't tell the admin!"
+                    </p>
+</div>
+<div class="flex gap-4 border-t border-outline-variant pt-6">
+<button class="flex-1 px-6 py-3 border-2 border-on-surface text-on-surface font-bold rounded-lg hover:bg-on-surface hover:text-surface transition-all duration-200">Ignore</button>
+<button class="flex-1 px-6 py-3 bg-primary-container text-on-primary-container border-2 border-primary-container font-bold rounded-lg hover:brightness-95 transition-all duration-200">Delete Content</button>
+</div>
+</div>
+<!-- Small Info Card -->
+<div class="md:col-span-4 bg-surface-container-low p-10 rounded-xl border border-outline-variant flex flex-col gap-6">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="policy">policy</span>
+<h4 class="text-headline-md font-headline-md text-on-surface">Guideline Tip</h4>
+<p class="text-body-md font-body-md text-secondary">
+                    Posts promoting "unauthorized access" or phishing links are a direct violation of Section 4.2 of our Community Safety Protocol.
+                </p>
+<a class="text-primary font-bold hover:underline flex items-center gap-2" href="#">
+                    Read full guidelines <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Flagged Post 2 -->
+<div class="md:col-span-4 bg-secondary-container p-8 rounded-xl border border-outline-variant flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Avatar" data-alt="A portrait of a young professional woman with long dark hair, smiling confidently at the camera. She is wearing a soft yellow sweater, and the lighting is bright and airy. The background is a minimalist, white-walled studio with a single green plant leaf visible in the corner, evoking a fresh and modern vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJFbRF254pjScwlRULBIZCHzqG1wCYlsqrY6i43R4oFUImZ9FnTpfri0yUCF3la0yid9NN-Rjo-nrdhsOvRdndz8xA_YRqqYbF0lJv7R_J2wL07FMdCq8lQAPbQsyazmmU7b1xZC7OLWPYuKPC9_GD_vdu6cRf_7PNrMIRhveuUxoX5-IdnfjiB59TZb7Lx-dkyhXs79geoyWX9Hr6GzHIarSMNhew0OUHLkJfjH_hMaR2cjDf-xZzirhyGyABvSoimzrnfS80KVIu"/>
+</div>
+<h3 class="text-label-sm font-label-sm text-on-surface">Sarah Jennings</h3>
+</div>
+<div class="mb-4 inline-block px-2 py-1 bg-error-container text-on-error-container rounded text-[10px] font-bold uppercase tracking-wider">Spam</div>
+<p class="text-body-md font-body-md text-on-surface mb-6 italic">
+                        "CHECK OUT THESE COOL T-SHIRTS FOR OUR CLASS REUNION. BEST PRICES ONLINE. BUY NOW AT TSHIRTPROS.BIZ!!!"
+                    </p>
+</div>
+<div class="flex flex-col gap-2">
+<button class="w-full px-4 py-2 border border-on-surface text-on-surface font-bold rounded text-label-sm hover:bg-on-surface hover:text-surface transition-all">Ignore</button>
+<button class="w-full px-4 py-2 bg-primary-container text-on-primary-container font-bold rounded text-label-sm hover:brightness-95 transition-all">Delete Content</button>
+</div>
+</div>
+<!-- Flagged Post 3 (Image Post) -->
+<div class="md:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-1/2 h-64 md:h-auto">
+<img alt="Post Image" class="w-full h-full object-cover" data-alt="A highly detailed wide shot of a modern university library at night, showing large glass windows that reveal rows of students studying at sleek, backlit wooden tables. The lighting is cool and blue with warm yellow interior glows, creating a peaceful, academic environment. The architectural style is minimalist with clean lines and exposed concrete elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDar6yUq070jjDjpudo7lHnNsuYNN55vrJrDy2HboDwK_9qBWBXBJy7tEWe-ooBWPVUvbZ4SbjxQ_h74f_25900McNQrrEV4uLnXJ5xGBawJsYsm7YcrNSc8YOQfVNanFjq3cg1czv67j0-xn8ZQavu6zOp4qI4EvUYfy_hX78SNw7gaqOPNRAKeduuEB3cn-rBy2w0YljUOnabHpn61K2EOm3w32duhXyGcj3Vzw4p0F5FXqj4XtTedtS6wFy8I8IhHki9l4zBYDGT"/>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest"></div>
+<div>
+<h3 class="text-label-sm font-label-sm text-on-surface">Anonymous User</h3>
+<p class="text-[12px] text-secondary">Flagged 5 times</p>
+</div>
+</div>
+<p class="text-body-md font-body-md text-on-surface mb-6">
+                            This post contains an image that has been flagged for copyright infringement by the University Media Center.
+                        </p>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 px-4 py-2 border-2 border-outline text-secondary font-bold rounded-lg hover:bg-surface-container transition-all">Ignore</button>
+<button class="flex-1 px-4 py-2 bg-primary-container text-on-primary-container font-bold rounded-lg hover:brightness-95 transition-all">Delete Content</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-16 text-center">
+<button class="group px-8 py-4 border-2 border-outline-variant text-on-surface font-bold rounded-full hover:border-primary transition-all inline-flex items-center gap-3">
+                Load more flagged posts
+                <span class="material-symbols-outlined group-hover:rotate-180 transition-transform duration-300" data-icon="refresh">refresh</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 max-w-max-width mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface mb-2">Alumni Connect</div>
+<p class="text-body-md font-body-md text-on-surface dark:text-on-surface-variant">© 2024 Alumni Connect. Building a modern heritage.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-10">
+<a class="text-label-sm font-label-sm text-secondary hover:text-on-surface hover:underline transition-all duration-200" href="#">About Us</a>
+<a class="text-label-sm font-label-sm text-secondary hover:text-on-surface hover:underline transition-all duration-200" href="#">Mentors</a>
+<a class="text-label-sm font-label-sm text-secondary hover:text-on-surface hover:underline transition-all duration-200" href="#">Privacy Policy</a>
+<a class="text-label-sm font-label-sm text-secondary hover:text-on-surface hover:underline transition-all duration-200" href="#">Contact</a>
+<a class="text-label-sm font-label-sm text-secondary hover:text-on-surface hover:underline transition-all duration-200" href="#">Community Guidelines</a>
+</div>
+</div>
+</footer>
+</body></html>

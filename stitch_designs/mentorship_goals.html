@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mentorship Detail &amp; Goals | Alumni Connect</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#444934",
+                        "tertiary-fixed": "#f7dcdc",
+                        "outline": "#757962",
+                        "secondary-fixed-dim": "#c3c7cb",
+                        "secondary-container": "#dce0e4",
+                        "outline-variant": "#c5c9ae",
+                        "on-secondary-fixed": "#171c1f",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#add500",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary-fixed": "#171e00",
+                        "tertiary-container": "#ffeaea",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-background": "#1c1b1b",
+                        "surface-tint": "#516600",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary-container": "#d4ff3e",
+                        "surface-bright": "#fcf9f8",
+                        "on-primary-fixed-variant": "#3d4d00",
+                        "on-primary": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "inverse-primary": "#add500",
+                        "surface-container": "#f0eded",
+                        "on-primary-container": "#5d7400",
+                        "background": "#fcf9f8",
+                        "tertiary": "#6d5a5a",
+                        "on-secondary-container": "#5e6367",
+                        "secondary": "#5a5f62",
+                        "on-surface": "#1c1b1b",
+                        "primary-fixed": "#c8f230",
+                        "on-tertiary-container": "#7b6767",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed": "#dfe3e7",
+                        "primary": "#516600",
+                        "on-secondary-fixed-variant": "#43474b",
+                        "tertiary-fixed-dim": "#dac1c1",
+                        "on-tertiary-fixed": "#261818",
+                        "surface-dim": "#dcd9d9",
+                        "on-tertiary-fixed-variant": "#544243"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(117, 121, 98, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopAppBar Component -->
+<header class="bg-surface dark:bg-surface-container-low fixed top-0 w-full z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface">Alumni Connect</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md transition-colors duration-200" href="#">Features</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md transition-colors duration-200" href="#">Directory</a>
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary font-bold pb-1 transition-colors duration-200" href="#">Mentorship</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md transition-colors duration-200" href="#">Events</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 text-secondary hover:text-primary transition-colors">dark_mode</button>
+<button class="hidden md:block text-secondary font-body-md hover:text-on-surface">Login</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold text-label-sm hover:scale-95 transition-transform duration-150">Get Started</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<!-- Hero Section: Relationship Identity -->
+<section class="mb-16">
+<div class="bg-surface-container-low rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 border border-outline-variant">
+<div class="flex -space-x-4">
+<img alt="Mentor" class="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-surface object-cover shadow-sm" data-alt="A professional woman with a warm, encouraging smile sitting in a brightly lit modern office. She is wearing a smart navy blazer over a white shirt, embodying a successful executive mentor persona. The background is softly blurred with hints of lush green office plants and minimalist wooden furniture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9mB2wC1RBT4CYGzbzLcH_YKuevHYrXiMs5WJptXJxAynrklLeZwloM7nQL1Bjy3IgAk5Qxh1HThxokenjhNP3WG63O11s4eRkyUC2cXbMwcd8BUrBKiO1WKYoy3_c-48TTQfxXD17tyTJxcYaykf0kR3DK58MvTxmmEgdS0tlnvwv2B897044raRfLXdh9wHG7NNSmQDSeam26YjF8w7C7da92lNr2BtidJwLA8_FY2Xgf8BeYeITLwzT8PxCdrribH3yi1kC9E_n"/>
+<img alt="Mentee" class="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-surface object-cover shadow-sm" data-alt="A young male professional in a casual grey sweater looking thoughtfully toward the camera in a modern startup environment. The scene is filled with natural daylight, casting soft shadows. He represents an ambitious mentee eager to learn, set against a backdrop of clean lines and optimistic workspace design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzlt_xSHnybFqIwBFQ9Cn8wnNCce41MU_DFQYyXdWhUWd32lUUy2v0oxoYh8EsluaXESIhfqNVWaKiS48RehcYZtRqNikkANvmH75d7FDKNj0R-igJZHOMRcFnzHr4bsSKpnXF0-3KiNaFwEWVavKuHqsAjbKWmRC1XOFY3Y7kVFwCnYiFQtvIq-_X5wKYW-1E43fThyzjjMHXQ8Q-Rt3NiYuRFUKIcvzK2Q_I6A2ioDrWmIiYHa2z_w5EA_ayxZXk_C6jbvJN1YEa"/>
+</div>
+<div class="text-center md:text-left flex-1">
+<div class="inline-block bg-primary-container text-on-primary-container text-label-sm px-4 py-1 rounded-full font-bold mb-4">Active Relationship • Established March 2024</div>
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg mb-2">Mentorship with Sarah Chen</h1>
+<p class="text-body-lg text-secondary max-w-2xl">Focusing on Executive Leadership and Strategic Product Management transitions.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface border-2 border-on-background px-6 py-3 rounded-full font-bold text-label-sm hover:bg-surface-container transition-colors">Message</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-full font-bold text-label-sm hover:scale-95 transition-transform duration-150">Schedule Meet</button>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Goals & Progress -->
+<div class="bento-grid">
+<!-- Overall Progress Card -->
+<div class="col-span-12 lg:col-span-4 bg-tertiary-container rounded-xl p-8 flex flex-col justify-between">
+<div>
+<h3 class="text-headline-md font-headline-md text-on-tertiary-container mb-2">Journey Progress</h3>
+<p class="text-body-md text-on-tertiary-container opacity-80">You've completed 6 of your 10 planned milestones this quarter.</p>
+</div>
+<div class="mt-12">
+<div class="flex justify-between items-end mb-2">
+<span class="text-display-xl font-display-xl text-on-tertiary-container">60%</span>
+<span class="text-label-sm font-label-sm text-on-tertiary-container mb-3 uppercase tracking-wider">Overall Goal Completion</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-4 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 60%"></div>
+</div>
+</div>
+</div>
+<!-- Main Goals Section -->
+<div class="col-span-12 lg:col-span-8 space-y-6">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-headline-md font-headline-md">Active Goals</h2>
+<button class="flex items-center gap-2 text-primary font-bold hover:underline">
+<span class="material-symbols-outlined">add_circle</span>
+                        Add New Goal
+                    </button>
+</div>
+<!-- Goal Card 1 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+<div class="flex justify-between items-start mb-6">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">leaderboard</span>
+</div>
+<div>
+<h4 class="text-headline-md font-headline-md mb-1">Executive Presence Coaching</h4>
+<p class="text-body-md text-secondary">Improve confidence in board-level presentations.</p>
+</div>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant text-label-sm px-3 py-1 rounded-full">Quarterly</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between text-label-sm">
+<span class="text-secondary">Progress</span>
+<span class="font-bold">85%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full">
+<div class="bg-primary h-full rounded-full" style="width: 85%"></div>
+</div>
+<div class="pt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-label-sm">Review board deck structure</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-label-sm">Mock presentation session</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg opacity-60">
+<span class="material-symbols-outlined text-outline">radio_button_unchecked</span>
+<span class="text-label-sm">Stakeholder feedback loop</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Goal Card 2 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+<div class="flex justify-between items-start mb-6">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<div>
+<h4 class="text-headline-md font-headline-md mb-1">Product Roadmap Strategy</h4>
+<p class="text-body-md text-secondary">Defining long-term vision for the Core UX team.</p>
+</div>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant text-label-sm px-3 py-1 rounded-full">Long-term</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between text-label-sm">
+<span class="text-secondary">Progress</span>
+<span class="font-bold">30%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full">
+<div class="bg-primary h-full rounded-full" style="width: 30%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Mentor Insight / Tips -->
+<div class="col-span-12 lg:col-span-12 bg-surface-container-highest rounded-xl p-8 flex flex-col md:flex-row items-center gap-8">
+<div class="w-full md:w-1/3">
+<img alt="Insight Illustration" class="rounded-xl aspect-video object-cover" data-alt="A clean, minimalist white board with colorful sticky notes arranged in a neat grid pattern, symbolizing strategic planning and clear thinking. The lighting is bright and airy, reflecting a modern creative office space with soft shadows and a professional, organized aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfEK_hFkuXpF-a5GTsPLjDq0bogoY8J4Wvj4BVkz6CWpevoSde2l7OshWwtxXiAYgVYhAgexLyRLLKuD1twDcOAYdo4lveNPMhjHMMqPjXbGqspVS04f58n9KpCtmzAo8FCiFe4wBZC6JS42UTpwreJZKmDw2wPlaZM2Z4Gr279UIwCOXc6iFG9TpMpv7qzQ6MlVLE7cAwP-zoIbeAdP56EOeE6c4t-b0k9-Axfdsf-rp9IAXkm8UXALhbK6P3vrPDvR0zJFmYILac"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined">lightbulb</span>
+<span class="text-label-sm font-bold uppercase tracking-widest">Mentor's Recent Tip</span>
+</div>
+<h3 class="text-headline-md font-headline-md mb-4 text-on-surface">Focus on the 'Why', not just the 'How'</h3>
+<p class="text-body-lg text-secondary italic">"When presenting your roadmap next week, remember that your stakeholders care most about the business outcome. Lead with the vision, and the features will justify themselves."</p>
+<div class="mt-6 flex items-center gap-3">
+<img alt="Sarah Chen" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5YSbaZkcjb1stGUr44QUmx-TaLv7twxc6n_6i2A8PmdNB8YsN-vBWW85LbfBM9xFey4wjTdb3j6ZY9RUjjLqI-4ISjRLns8k3v2RKd2-TY2jJAHjmcNVZ6cq0LByIA5rpBkN-illgcYPVjyBpQ9NA1IG8RSefduj7M5MzgI_aNGy2kLFvR7-3j5v5NGPGBLbqgxe1q8IOhYmjsRvDl_lPm8LjAV3eFW_aGRglSTNDO1COdB0LbzCzrKFv1XJMdW8qyKJ-Z_ZHUoPW"/>
+<span class="text-label-sm font-bold">— Sarah Chen</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 max-w-max-width mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface mb-2">Alumni Connect</div>
+<p class="text-body-md text-secondary dark:text-on-surface-variant">© 2024 Alumni Connect. Building a modern heritage.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-12">
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200" href="#">About Us</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200" href="#">Mentors</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200" href="#">Privacy Policy</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200" href="#">Contact</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200" href="#">Community Guidelines</a>
+</div>
+</div>
+</footer>
+</body></html>

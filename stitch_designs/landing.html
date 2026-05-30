@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alumni Connect - Bridge Your Future</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#516600",
+                        "on-secondary-fixed-variant": "#43474b",
+                        "tertiary": "#6d5a5a",
+                        "primary-fixed": "#c8f230",
+                        "on-primary-fixed-variant": "#3d4d00",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-highest": "#e5e2e1",
+                        "tertiary-fixed-dim": "#dac1c1",
+                        "surface-container": "#f0eded",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#eae7e7",
+                        "inverse-primary": "#add500",
+                        "secondary-fixed": "#dfe3e7",
+                        "on-tertiary-fixed": "#261818",
+                        "on-secondary-container": "#5e6367",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#dce0e4",
+                        "secondary": "#5a5f62",
+                        "on-tertiary-fixed-variant": "#544243",
+                        "surface": "#fcf9f8",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "tertiary-fixed": "#f7dcdc",
+                        "outline": "#757962",
+                        "on-primary-container": "#5d7400",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#7b6767",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fcf9f8",
+                        "surface-bright": "#fcf9f8",
+                        "outline-variant": "#c5c9ae",
+                        "primary-container": "#d4ff3e",
+                        "on-background": "#1c1b1b",
+                        "on-primary-fixed": "#171e00",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#c3c7cb",
+                        "surface-tint": "#516600",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "tertiary-container": "#ffeaea",
+                        "surface-dim": "#dcd9d9",
+                        "primary-fixed-dim": "#add500",
+                        "on-surface": "#1c1b1b",
+                        "on-secondary-fixed": "#171c1f",
+                        "on-surface-variant": "#444934",
+                        "surface-container-low": "#f6f3f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "max-width": "1280px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal-card {
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;
+        }
+        .reveal-card:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+        .form-container {
+            transition: all 0.4s ease-in-out;
+        }
+        .hero-underline {
+            background-image: linear-gradient(transparent 80%, #d4ff3e 80%);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="flex items-center gap-2">
+<div class="bg-primary-container p-1 rounded-lg">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="school">school</span>
+</div>
+<span class="text-headline-md font-bold tracking-tight">Alumni Connect</span>
+</div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-on-surface hover:text-primary transition-colors text-label-sm font-bold" href="#home">Home</a>
+<a class="text-secondary hover:text-on-surface transition-colors text-label-sm font-bold" href="#mission">Mission</a>
+<a class="text-secondary hover:text-on-surface transition-colors text-label-sm font-bold" href="#testimonials">Testimonials</a>
+<a class="text-secondary hover:text-on-surface transition-colors text-label-sm font-bold" href="#team">Team</a>
+<a class="text-secondary hover:text-on-surface transition-colors text-label-sm font-bold" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-bold text-label-sm hover:opacity-90 hover:scale-105 active:scale-95 transition-all">Sign Up</button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center overflow-hidden bg-surface-container-low">
+<div class="absolute inset-0 z-0">
+<img alt="Welcome Illustration" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujWOZ8buOF7lIgxr_1ZNVmI-uqrTc2_osnIYH9-gIEpRDNRPVOsYT_SR1s4vPXZhq6CCe_aMxWQDbEL3ephuBpaGMmRrbYblp16ypQl8GXUYbL5_AfdGiPPROcWVrVFP_dbYcn1q66yX_q-rmin2q3umPd9kqC2VWRfvMJXpqcF89J3KpYrUTLav6anBcqubBLsgS4g8x8IUNonuMMFsdR1qTEjJOTkjcs3osa1ctBebIIDyUZr05mLT3xJ"/>
+<div class="absolute inset-0 bg-surface/40 backdrop-blur-[2px]"></div>
+</div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-20 relative z-10 w-full">
+<div class="max-w-3xl space-y-8">
+<h1 class="font-display-xl text-display-xl max-md:text-headline-lg-mobile text-on-surface leading-tight">
+                    Welcome to <br/> <span class="hero-underline">Alumni Connect.</span>
+</h1>
+<p class="text-body-lg text-on-surface font-semibold max-w-xl">
+                    The exclusive digital bridge for the world's most ambitious graduates. Reconnect with your legacy and accelerate your career.
+                </p>
+<!-- Community Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 py-4">
+<div class="space-y-1">
+<div class="text-headline-lg font-bold text-primary">10K+</div>
+<div class="text-label-sm font-bold text-secondary uppercase tracking-widest">Active Alumni</div>
+</div>
+<div class="space-y-1">
+<div class="text-headline-lg font-bold text-primary">500+</div>
+<div class="text-label-sm font-bold text-secondary uppercase tracking-widest">Expert Mentors</div>
+</div>
+<div class="space-y-1">
+<div class="text-headline-lg font-bold text-primary">200+</div>
+<div class="text-label-sm font-bold text-secondary uppercase tracking-widest">Global Companies</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-on-surface text-surface px-10 py-5 rounded-full font-bold text-body-md hover:shadow-xl hover:-translate-y-1 transition-all active:scale-95">Claim Your Profile</button>
+<button class="border-2 border-on-surface text-on-surface px-10 py-5 rounded-full font-bold text-body-md hover:bg-surface-container transition-colors">Learn More</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Legacy Reconnected Section with Form -->
+<section class="py-20 bg-surface" id="home">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h2 class="font-display-xl text-display-xl max-md:text-headline-lg-mobile text-on-surface leading-tight">
+                    Your legacy, <br/> <span class="hero-underline">reconnected.</span>
+</h2>
+<p class="text-body-lg text-secondary max-w-lg">
+                    Bridge the gap between your graduation and your career. We solve the connection problem by bringing 10k+ alumni into one seamless professional network.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-on-surface text-surface px-8 py-4 rounded-full font-bold text-body-md hover:shadow-xl hover:-translate-y-1 transition-all active:scale-95">Explore Network</button>
+<button class="border-2 border-on-surface text-on-surface px-8 py-4 rounded-full font-bold text-body-md hover:bg-surface-container transition-colors">How it works</button>
+</div>
+</div>
+<!-- Login/Register Toggle Form -->
+<div class="bg-surface-container-lowest p-8 md:p-10 rounded-[2rem] shadow-2xl border border-outline-variant max-w-md mx-auto lg:ml-auto w-full">
+<div class="flex bg-surface-container rounded-full p-1 mb-8 relative">
+<button class="flex-1 py-2 text-label-sm font-bold rounded-full relative z-10 transition-colors text-on-surface" id="loginToggle">Login</button>
+<button class="flex-1 py-2 text-label-sm font-bold rounded-full relative z-10 transition-colors text-secondary" id="registerToggle">Register</button>
+<div class="absolute top-1 left-1 w-[calc(50%-4px)] h-[calc(100%-8px)] bg-primary-container rounded-full transition-all duration-300 ease-out" id="toggleIndicator"></div>
+</div>
+<div class="space-y-6" id="formContent">
+<!-- Login Form (Default) -->
+<form class="space-y-4" id="loginForm">
+<div>
+<label class="block text-label-sm font-bold mb-2">Email Address</label>
+<input class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-primary bg-surface-container-lowest" placeholder="name@university.edu" type="email"/>
+</div>
+<div>
+<label class="block text-label-sm font-bold mb-2">Password</label>
+<input class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-primary bg-surface-container-lowest" placeholder="••••••••" type="password"/>
+</div>
+<button class="w-full bg-on-surface text-surface py-4 rounded-xl font-bold hover:opacity-90 transition-opacity" type="submit">Sign In</button>
+</form>
+<!-- Register Form (Hidden) -->
+<form class="hidden space-y-4" id="registerForm">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-label-sm font-bold mb-2">Full Name</label>
+<input class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-primary bg-surface-container-lowest" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block text-label-sm font-bold mb-2">Grad Year</label>
+<input class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-primary bg-surface-container-lowest" placeholder="2023" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-bold mb-2">Email</label>
+<input class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-primary bg-surface-container-lowest" placeholder="name@university.edu" type="email"/>
+</div>
+<div>
+<label class="block text-label-sm font-bold mb-2">Password</label>
+<input class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-primary bg-surface-container-lowest" placeholder="••••••••" type="password"/>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-4 rounded-xl font-bold hover:opacity-90 transition-opacity" type="submit">Create Account</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission Section -->
+<section class="py-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop" id="mission">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<img alt="Mission Illustration" class="w-full h-auto rounded-[2.5rem]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsiYqE7ONyFKfJNxY2EL8D04WnDkrfvCL1x217-cdPPAXhwFrVsvWW1s7C3frLFQVVKYvo9aaRoRcHeE04pgW8GcJovgJ8uEw7dJ4fodiHiPxwxDFDSPndbuaNDJz4QP8P-BhonE5n8UTIHGUid9BsHWj0nCfBfcRlfR_BjPGQ5Tq7bHHf-65_et9F57EI52_VEhmGXwrpdiyRqBPGGi7sNbpO03OdtfsmSMYjyfREgbvBDP3sAifs5ZEH8-3McFF1-eMGV8DZo-v1"/>
+</div>
+<div class="space-y-6 order-1 lg:order-2">
+<div class="inline-block bg-primary-container/30 px-4 py-1.5 rounded-full text-primary font-bold text-label-sm uppercase tracking-wider">Our Mission</div>
+<h2 class="text-headline-lg font-bold leading-tight">Empowering a lifelong academic heritage.</h2>
+<p class="text-body-lg text-secondary">
+                    Alumni Connect exists to eliminate the professional isolation that often follows graduation. We believe your university ties are your strongest asset. 
+                </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="text-body-md font-bold text-on-surface">Verified alumni-only directory for secure networking.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="text-body-md font-bold text-on-surface">Curated mentorship programs matching experience with ambition.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="text-body-md font-bold text-on-surface">Direct access to career opportunities within the inner circle.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Features Overview: Everything you need to thrive -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-headline-lg font-bold">Everything you need to thrive</h2>
+<p class="text-body-lg text-secondary max-w-2xl mx-auto">A comprehensive ecosystem designed specifically for the modern graduate's journey.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Alumni Connections -->
+<div class="reveal-card bg-surface-container-lowest overflow-hidden rounded-[2.5rem] border border-outline-variant flex flex-col">
+<div class="p-8 pb-0">
+<h3 class="text-headline-md font-bold mb-3">Alumni Connections</h3>
+<p class="text-secondary mb-6">Forge powerful partnerships with verified peers across any industry.</p>
+</div>
+<div class="mt-auto px-8 pb-8">
+<img alt="Alumni Connections" class="w-full h-48 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhUygNCTnIpRtab94KC_RnbTbStoGmPA0I3Lt2VqKukK30M0NnXVWGmUoKbYTONRi7VY4TiPjaQBlGGUEkZdcdPx9FLFoU0DZqy8NrQj5xeBoqrWpIITvQBq3szkM3ge57FhBK7PIzn7zgwmaCmbDKWIgSmv2r7mDB_pLQmfB1svALlwVUsuQL-eNTBN8_eWwJE13Xy0iAppXZB16sKBKYQcmvhEDjes3_AIU5qstimt8DYDHKf_Ir_lrY"/>
+</div>
+</div>
+<!-- Mentorship & Growth -->
+<div class="reveal-card bg-surface-container-lowest overflow-hidden rounded-[2.5rem] border border-outline-variant flex flex-col">
+<div class="p-8 pb-0">
+<h3 class="text-headline-md font-bold mb-3">Mentorship &amp; Growth</h3>
+<p class="text-secondary mb-6">Learn from those who've walked your path and achieve your career goals.</p>
+</div>
+<div class="mt-auto px-8 pb-8">
+<img alt="Mentorship &amp; Growth" class="w-full h-48 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugZJjwufeZ2nRZQ5svxG5FvHI5umHq84x1Ee5UpWCj5caFhNUWqJQc5owAh0o9YSFqRcQ1D-cxyQjC4Pyeec7EOjMgTL2MUY_L6KUFvj4xOoz-dTWE6V9Cy4BMOUeUpJl_aYg1dOwPijX3ylXCkCAd7eFboO2P-5-JFU9QNILL5Q9phzhL-Xi8B4xEH-l1QqG7yG2ZGNxGb5xsc0W-BW-6kVkVmn0t0nrt2JSOf71tCN8sxgNhTXsWZSxYv"/>
+</div>
+</div>
+<!-- Events & Networking -->
+<div class="reveal-card bg-surface-container-lowest p-8 rounded-[2.5rem] border border-outline-variant">
+<div class="w-16 h-16 bg-[#e7f4d5] rounded-3xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="event">event</span>
+</div>
+<h3 class="text-headline-md font-bold mb-3">Events &amp; Networking</h3>
+<p class="text-secondary">Exclusive access to global industry summits, regional meetups, and skill-building webinars.</p>
+</div>
+<!-- Professional Messaging -->
+<div class="reveal-card bg-surface-container-lowest p-8 rounded-[2.5rem] border border-outline-variant">
+<div class="w-16 h-16 bg-surface-container-highest rounded-3xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl" data-icon="forum">forum</span>
+</div>
+<h3 class="text-headline-md font-bold mb-3">Professional Messaging</h3>
+<p class="text-secondary">Direct, secure communication channels with any alumni member worldwide without intermediate gatekeepers.</p>
+</div>
+<!-- Career Portal (Double width) -->
+<div class="reveal-card bg-surface-container-lowest p-8 rounded-[2.5rem] border border-outline-variant md:col-span-2">
+<div class="flex flex-col md:flex-row items-start md:items-center gap-8 h-full">
+<div class="w-20 h-20 bg-[#d4ff3e] rounded-3xl flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container text-4xl" data-icon="work">work</span>
+</div>
+<div class="space-y-4">
+<h3 class="text-headline-md font-bold">Integrated Career Portal</h3>
+<p class="text-secondary max-w-xl">Browse job openings shared directly by alumni within top-tier global companies. Get referred, get noticed, and land your next role with the power of your network.</p>
+<button class="text-primary font-bold inline-flex items-center gap-2 hover:gap-4 transition-all">
+                                Explore opportunities <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop" id="testimonials">
+<div class="text-center mb-16">
+<h2 class="text-headline-lg font-bold">Voices of the Network</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="reveal-card bg-surface-container p-8 rounded-[2rem] flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-primary-container">
+<img alt="Sarah Chen" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDltJ1eGReKMIkOfCvkLlb8xs17Y4WLeYi25jLBSiei0BWSBkWX0L1cbN8yRHagTXGkB15BrJhIyJQQieLUthUYVkLkdnEiSkHnQ-3h8eG7kWdf9KwQXWJdvwA0qTx6m7y1tgZDJfDHjPFX6bfEHL9MpLmgfZ1NuCirU4BqImwQgLvRvfoA_JiZtXUv5e2F_J17sKDibnrUp8vWHlsQaAmKzXEjzhRPDAvYr6rbBmNHHxDWLc26Y7rhTJIDhiPOAsaD03nD4F8Rnq-5"/>
+</div>
+<p class="text-body-md italic text-on-surface mb-6">"Found my current VP role through a direct message here. The level of trust is unmatched compared to LinkedIn."</p>
+<div>
+<h4 class="font-bold text-on-surface">Sarah Chen</h4>
+<p class="text-label-sm text-secondary uppercase tracking-widest">Class of 2015</p>
+</div>
+</div>
+<div class="reveal-card bg-surface-container p-8 rounded-[2rem] flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-primary-container">
+<img alt="Elena Rodriguez" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC2eVgOuxSR6WVLB5944gmqOpSEK1BMwEQHIg3miivE3C5_A3zEL9HguHeCLXxoMM4GeLnhJQvj2e4RZp7X9LufO9potfM8ebsZ7MVzqNjAZaeVJpfCmy-zTAEIxBtAz5Khlc01WQ5QUOkzPXvNHlnhERAL8s6qegwyP0ZxuKzkUAHL4kUPa_zDGm62gXV7tyDT8kffghAdArLtxWcD2441c1tya7IFlRzeB9EcrG7EksLZZqNqLMJIt7t3Ft7Bl4txgliE5zN4Box"/>
+</div>
+<p class="text-body-md italic text-on-surface mb-6">"The mentorship program gave me guidance when I was switching industries. My mentor is now a close advisor."</p>
+<div>
+<h4 class="font-bold text-on-surface">Elena Rodriguez</h4>
+<p class="text-label-sm text-secondary uppercase tracking-widest">Class of 2018</p>
+</div>
+</div>
+<div class="reveal-card bg-surface-container p-8 rounded-[2rem] flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-primary-container">
+<span class="material-symbols-outlined text-6xl text-primary-container" data-icon="account_circle">account_circle</span>
+</div>
+<p class="text-body-md italic text-on-surface mb-6">"Staying connected to my alma mater has never been easier. I've hired three graduates through this portal already."</p>
+<div>
+<h4 class="font-bold text-on-surface">David Park</h4>
+<p class="text-label-sm text-secondary uppercase tracking-widest">Class of 2010</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-24 bg-on-surface text-surface overflow-hidden" id="team">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h2 class="text-headline-lg font-bold">The Founders behind the connection.</h2>
+<p class="text-body-lg text-surface-variant">We are a team of educators and developers dedicated to preserving the value of higher education through lifelong networking.</p>
+<div class="flex gap-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform">Work with us</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="reveal-card bg-surface/10 p-6 rounded-[2rem] border border-surface/20">
+<img alt="Founding Member" class="w-full aspect-square object-cover rounded-2xl mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwznqX3QrwBfVmaXokFRVNPgV59TNRhB6SZloUyad6D-rLbrcOdWv3iek25Kz438C5SlUOzpKvUE5ve1lK3U2a72x2SyRwlHnwi9Ifw7RlWzXY9meCMu9Dp5KTgzG0VxqscK2jP2wOhOsPOkXYCycctBghQ5AXGv2lYPO7YHvoiRxrW5vLSPZvBjIhOQl-L4ClkrSYgwp8m3YXmRnSVKh4G21dBr2F-WEeatiOJ_rUT0wQA9T0VFO4P84is01Nd8v6RuxVCXPy0DQN"/>
+<h4 class="font-bold">Dr. Aris Varma</h4>
+<p class="text-label-sm text-surface-variant uppercase tracking-tighter">Chief Executive Officer</p>
+</div>
+<div class="reveal-card bg-surface/10 p-6 rounded-[2rem] border border-surface/20">
+<div class="w-full aspect-square bg-primary-container/20 rounded-2xl mb-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary-container" data-icon="person">person</span>
+</div>
+<h4 class="font-bold">Lila Thorne</h4>
+<p class="text-label-sm text-surface-variant uppercase tracking-tighter">Head of Community</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works -->
+<section class="py-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="text-headline-lg font-bold">How it Works</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-4">
+<div class="text-display-xl font-black text-primary-container/50 leading-none">01</div>
+<h4 class="text-headline-md font-bold">Verify Identity</h4>
+<p class="text-secondary">Sync with your university credentials to confirm your alumni status.</p>
+</div>
+<div class="space-y-4">
+<div class="text-display-xl font-black text-primary-container/50 leading-none">02</div>
+<h4 class="text-headline-md font-bold">Build Profile</h4>
+<p class="text-secondary">Highlight your career path, skills, and what you're looking for.</p>
+</div>
+<div class="space-y-4">
+<div class="text-display-xl font-black text-primary-container/50 leading-none">03</div>
+<h4 class="text-headline-md font-bold">Get Matched</h4>
+<p class="text-secondary">Receive daily peer and mentor suggestions based on your goals.</p>
+</div>
+<div class="space-y-4">
+<div class="text-display-xl font-black text-primary-container/50 leading-none">04</div>
+<h4 class="text-headline-md font-bold">Grow Together</h4>
+<p class="text-secondary">Attend events, secure roles, and eventually mentor others.</p>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-headline-lg font-bold text-center mb-12">Frequently Asked Questions</h2>
+<div class="space-y-6">
+<div class="border-b border-outline-variant pb-6">
+<button class="flex justify-between items-center w-full text-left group">
+<span class="text-headline-md font-bold group-hover:text-primary transition-colors">Is my data secure?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<div class="border-b border-outline-variant pb-6">
+<button class="flex justify-between items-center w-full text-left group">
+<span class="text-headline-md font-bold group-hover:text-primary transition-colors">How do I verify my status?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<div class="border-b border-outline-variant pb-6">
+<button class="flex justify-between items-center w-full text-left group">
+<span class="text-headline-md font-bold group-hover:text-primary transition-colors">Can I use this for hiring?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container-high pt-24 pb-12 border-t border-outline-variant" id="contact">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<div class="flex items-center gap-2">
+<div class="bg-primary-container p-1 rounded-lg">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="school">school</span>
+</div>
+<span class="text-headline-md font-bold">Alumni Connect</span>
+</div>
+<p class="text-secondary text-label-sm">Building the world's most trusted academic professional network.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a>
+<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6">Quick Links</h5>
+<ul class="space-y-4 text-label-sm text-secondary">
+<li><a class="hover:text-on-surface transition-colors" href="#home">Home</a></li>
+<li><a class="hover:text-on-surface transition-colors" href="#mission">Our Mission</a></li>
+<li><a class="hover:text-on-surface transition-colors" href="#testimonials">Testimonials</a></li>
+<li><a class="hover:text-on-surface transition-colors" href="#team">Founding Team</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Contact Us</h5>
+<ul class="space-y-4 text-label-sm text-secondary">
+<li class="flex gap-3"><span class="material-symbols-outlined text-[18px]">mail</span> hello@alumniconnect.com</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-[18px]">phone</span> +1 (555) 0123-4567</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-[18px]">location_on</span> Silicon Valley, CA</li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Legal</h5>
+<ul class="space-y-4 text-label-sm text-secondary">
+<li><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-on-surface transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4 text-label-sm text-secondary">
+<p>© 2024 Alumni Connect. All rights reserved.</p>
+<p>Made with passion for the academic community.</p>
+</div>
+</div>
+</footer>
+<script>
+    // Toggle Logic
+    const loginToggle = document.getElementById('loginToggle');
+    const registerToggle = document.getElementById('registerToggle');
+    const toggleIndicator = document.getElementById('toggleIndicator');
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+
+    loginToggle.addEventListener('click', () => {
+        toggleIndicator.style.left = '4px';
+        loginToggle.classList.add('text-on-surface');
+        loginToggle.classList.remove('text-secondary');
+        registerToggle.classList.add('text-secondary');
+        registerToggle.classList.remove('text-on-surface');
+        loginForm.classList.remove('hidden');
+        registerForm.classList.add('hidden');
+    });
+
+    registerToggle.addEventListener('click', () => {
+        toggleIndicator.style.left = 'calc(50%)';
+        registerToggle.classList.add('text-on-surface');
+        registerToggle.classList.remove('text-secondary');
+        loginToggle.classList.add('text-secondary');
+        loginToggle.classList.remove('text-on-surface');
+        registerForm.classList.remove('hidden');
+        loginForm.classList.add('hidden');
+    });
+
+    // Smooth Scroll Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-card').forEach(el => {
+        el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+        observer.observe(el);
+    });
+</script>
+</body></html>

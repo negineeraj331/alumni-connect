@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alumni Directory | Alumni Connect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#5a5f62",
+                        "surface": "#fcf9f8",
+                        "primary-fixed": "#c8f230",
+                        "on-secondary-container": "#5e6367",
+                        "outline": "#757962",
+                        "surface-variant": "#e5e2e1",
+                        "background": "#fcf9f8",
+                        "on-tertiary-container": "#7b6767",
+                        "secondary-fixed-dim": "#c3c7cb",
+                        "on-primary-fixed-variant": "#3d4d00",
+                        "tertiary-fixed-dim": "#dac1c1",
+                        "surface-tint": "#516600",
+                        "on-secondary-fixed": "#171c1f",
+                        "secondary-fixed": "#dfe3e7",
+                        "primary-fixed-dim": "#add500",
+                        "primary-container": "#d4ff3e",
+                        "surface-bright": "#fcf9f8",
+                        "secondary-container": "#dce0e4",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "outline-variant": "#c5c9ae",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#544243",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#261818",
+                        "inverse-primary": "#add500",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-dim": "#dcd9d9",
+                        "on-surface": "#1c1b1b",
+                        "tertiary-container": "#ffeaea",
+                        "on-surface-variant": "#444934",
+                        "error": "#ba1a1a",
+                        "on-background": "#1c1b1b",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "surface-container": "#f0eded",
+                        "on-secondary-fixed-variant": "#43474b",
+                        "tertiary": "#6d5a5a",
+                        "inverse-surface": "#313030",
+                        "surface-container-high": "#eae7e7",
+                        "tertiary-fixed": "#f7dcdc",
+                        "primary": "#516600",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary-fixed": "#171e00",
+                        "on-primary-container": "#5d7400"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "max-width": "1280px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopAppBar Shell -->
+<header class="bg-surface dark:bg-surface-container-low fixed top-0 left-0 right-0 z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface">Alumni Connect</div>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Features</a>
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary font-bold pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Directory</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Mentorship</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface font-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Events</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">dark_mode</button>
+<button class="hidden md:block text-secondary font-body-md px-4 py-2 hover:text-on-surface transition-colors">Login</button>
+<button class="bg-primary-fixed text-on-primary-fixed font-bold px-6 py-2 rounded-full hover:scale-95 transition-transform duration-150">Get Started</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-24">
+<!-- Search & Filter Header Section -->
+<section class="max-w-max-width mx-auto px-margin-desktop mb-16">
+<div class="mb-12">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-4">Find your community</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">Connect with thousands of graduates making an impact across industries worldwide.</p>
+</div>
+<!-- Search Interface -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant shadow-sm space-y-6">
+<div class="flex flex-col md:flex-row gap-4">
+<!-- Global Search -->
+<div class="flex-grow relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-secondary">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-white border border-secondary rounded-lg focus:ring-2 focus:ring-primary-fixed focus:border-primary-fixed outline-none transition-all" placeholder="Search by name, company, or keywords..." type="text"/>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed font-bold px-8 py-4 rounded-lg hover:opacity-90 transition-opacity">Search Directory</button>
+</div>
+<!-- Filters Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-2">
+<label class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">Industry</label>
+<select class="w-full p-3 bg-white border border-secondary rounded-lg outline-none focus:border-primary-fixed">
+<option>All Industries</option>
+<option>Technology</option>
+<option>Finance</option>
+<option>Design</option>
+<option>Healthcare</option>
+<option>Education</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">Location</label>
+<select class="w-full p-3 bg-white border border-secondary rounded-lg outline-none focus:border-primary-fixed">
+<option>Global</option>
+<option>San Francisco, CA</option>
+<option>New York, NY</option>
+<option>London, UK</option>
+<option>Berlin, DE</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">Graduation Year</label>
+<select class="w-full p-3 bg-white border border-secondary rounded-lg outline-none focus:border-primary-fixed">
+<option>All Years</option>
+<option>2020 - Present</option>
+<option>2010 - 2019</option>
+<option>2000 - 2009</option>
+<option>Pre-2000</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Directory Results Grid -->
+<section class="max-w-max-width mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl border border-outline-variant hover:border-primary-fixed transition-colors group">
+<div class="flex flex-col items-center text-center">
+<img class="w-24 h-24 rounded-full mb-6 object-cover border-4 border-surface-container-low" data-alt="Professional headshot of a female executive in a modern bright office setting. She has a confident smile and is wearing a minimalist dark blazer. The lighting is soft and natural, reflecting a clean, high-end professional aesthetic with a soft-focus office background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyeGB-Q5RwYdpOtKqt0VsGmC5afAPIHvXvhf846L2DwlPggNaOM4dLPoqnCMDWRSnVcRCpHFDij3TvQw7gyslESYhvDOXMtazXr8zwytJ7VikcOwDvUDaPW0-aQdXQREfoF6_ei5Vt1ySCfdOaz3BUv3_Mem5kckGM9P-0qUB2t0NB7M1JdbLX41VtSqhyP740rBwS1ZNF1_k0MHx1hEcQRUPipcnRXPPHZFuD2MItA47RHlAUsK5fm2zdstRnmyYTa71x8JOZL75L"/>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Sarah Jenkins</h3>
+<p class="font-body-md text-body-md text-secondary mb-4">Senior UX Designer at Google</p>
+<div class="flex flex-wrap justify-center gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm rounded-full">Class of 2015</span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm rounded-full">Mentor</span>
+</div>
+<div class="w-full flex flex-col gap-3">
+<button class="w-full bg-primary-fixed text-on-primary-fixed font-bold py-3 rounded-lg hover:opacity-90 transition-opacity">Connect</button>
+<button class="w-full bg-transparent border border-on-surface text-on-surface font-bold py-3 rounded-lg hover:bg-surface-container-low transition-colors">View Profile</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl border border-outline-variant hover:border-primary-fixed transition-colors group">
+<div class="flex flex-col items-center text-center">
+<img class="w-24 h-24 rounded-full mb-6 object-cover border-4 border-surface-container-low" data-alt="Studio portrait of a male professional in his late 30s. He is wearing a crisp white shirt and dark-rimmed glasses. The background is a solid muted grey, highlighting the sharp details and professional, approachable demeanor in a bright light-mode style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1E2xwX39Q3D9lj_3YgwPScxuZT5X9GXFx-qQn-78OxAXDjZw5za7CLq32cwnvu6yycu6GMKzG71xJCReLagHZ4bgHV3WWYJJsn_ZZ-GBikBMmXw1Z86jh84HwcMh0WAZfyhuIDvz46qPQHeC2yhVzlSbSMxCDmmpVqvnDkW63pRUc28-f7Rp7g2kIzGANHaKSJXgloQGF4cxXLx5jd4-wZFfWVsFMe7qDY05CCxD_OOIAlKtxuJpry4xA7zwkqmIIexWXyyA8R7Hm"/>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Marcus Thorne</h3>
+<p class="font-body-md text-body-md text-secondary mb-4">VP Engineering at Stripe</p>
+<div class="flex flex-wrap justify-center gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm rounded-full">Class of 2008</span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm rounded-full">FinTech</span>
+</div>
+<div class="w-full flex flex-col gap-3">
+<button class="w-full bg-primary-fixed text-on-primary-fixed font-bold py-3 rounded-lg hover:opacity-90 transition-opacity">Connect</button>
+<button class="w-full bg-transparent border border-on-surface text-on-surface font-bold py-3 rounded-lg hover:bg-surface-container-low transition-colors">View Profile</button>
+</div>
+</div>
+</div>
+<!-- Card 3 (Rose Tonal Background) -->
+<div class="bg-tertiary-container p-10 rounded-xl border border-outline-variant hover:border-primary-fixed transition-colors group">
+<div class="flex flex-col items-center text-center">
+<img class="w-24 h-24 rounded-full mb-6 object-cover border-4 border-white/50" data-alt="A portrait of a young professional woman smiling broadly. She is in a vibrant, creative studio environment with soft artistic lighting. Her attire is business casual. The composition is clean and modern, following the minimalistic professional tone of the directory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYQrTyGsr3XMEYLvW1fa8I4ml6UfjZ5Z-_2qGbAfSWtcgmD3WBAVqMtUd-16fuxiuL8YmhRFja9vHZezryZVlDulPqCnaswYCvJdi6ktwOujOst2pCJHtQ8rHYrGt2KUcEKY5dMNHIzkqEP5mZSISV37zLdHyCt1uFGxJHFf6AfxdSpWxu0UKv0Gc-f_HyC3GRVlRKpxRLCn0N115LELzYBVN6_cH3dr4H0We3muTzkwiG14Jx0uS5Tzv811FoxCxT16ASlKeNUsDa"/>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Elena Rodriguez</h3>
+<p class="font-body-md text-body-md text-secondary mb-4">Product Lead at Airbnb</p>
+<div class="flex flex-wrap justify-center gap-2 mb-8">
+<span class="px-3 py-1 bg-white/60 text-on-surface-variant font-label-sm text-label-sm rounded-full">Class of 2012</span>
+<span class="px-3 py-1 bg-white/60 text-on-surface-variant font-label-sm text-label-sm rounded-full">Hospitality</span>
+</div>
+<div class="w-full flex flex-col gap-3">
+<button class="w-full bg-primary-fixed text-on-primary-fixed font-bold py-3 rounded-lg hover:opacity-90 transition-opacity">Connect</button>
+<button class="w-full bg-transparent border border-on-surface text-on-surface font-bold py-3 rounded-lg hover:bg-white/40 transition-colors">View Profile</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl border border-outline-variant hover:border-primary-fixed transition-colors group">
+<div class="flex flex-col items-center text-center">
+<img class="w-24 h-24 rounded-full mb-6 object-cover border-4 border-surface-container-low" data-alt="Professional profile photo of a man in a modern casual professional outfit. The setting is a minimalist library with soft natural lighting and a clean white background aesthetic. The mood is calm and scholarly yet very contemporary and approachable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwTh3A7OxHxlYfOVMefXxZSjMSt0PO5tvJXmQbiKCybW7r1smEIrTdFoAHKOiVQ_nc4ev_6axPBAnZNBQijdBgzlJZD_OYsoBF9PawvClNxZ4uh-g6O9YVtUT1q50n2FfpKQEJYGb7XjdQ1wkD1G2HlMg0bYSiZD0nxvz4T64jdNGlmbZh0POqPQFsotO_50NVjVJQx_iULITDYmNOhEPa86pCRtb8bCaZHZymmWsXxf6Xh56622x2C1Lw9VwJv3RjOhx06XisSgjo"/>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">David Chen</h3>
+<p class="font-body-md text-body-md text-secondary mb-4">AI Research Scientist at DeepMind</p>
+<div class="flex flex-wrap justify-center gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm rounded-full">Class of 2019</span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm rounded-full">PhD</span>
+</div>
+<div class="w-full flex flex-col gap-3">
+<button class="w-full bg-primary-fixed text-on-primary-fixed font-bold py-3 rounded-lg hover:opacity-90 transition-opacity">Connect</button>
+<button class="w-full bg-transparent border border-on-surface text-on-surface font-bold py-3 rounded-lg hover:bg-surface-container-low transition-colors">View Profile</button>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl border border-outline-variant hover:border-primary-fixed transition-colors group">
+<div class="flex flex-col items-center text-center">
+<img class="w-24 h-24 rounded-full mb-6 object-cover border-4 border-surface-container-low" data-alt="Portrait of a female professional with an intellectual and friendly look. She is in a brightly lit architectural office with large windows. The lighting is high-key and the style is modern minimalism, focusing on clarity and a sense of professional openness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqV8JhBzd9N4H-Gi8Bh4U-GsJ3eWjthjMIYGgzRvnwCwJD9XGTCrBbdjSJw9RGkyUdu2xRTG-9KCAuYBfe-ONEABZuC499tyoLj2ePcnIb0AguKMRT_Mt60IFaesDKc4fbzjIlo70WN7drOd_GmxWBcMhBmbSSnYqbkXPeYlZrTBtbB8_7LZrcNmxrWBch1OD9cw3oxr8_hdHmNJWDkXYOb4pP8Qr1N4CTCpBvUtuy4AF6RAIRmVdy6C6nJje6ObqxN5fYYyJeWS5F"/>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Leila Vance</h3>
+<p class="font-body-md text-body-md text-secondary mb-4">Creative Director at Adobe</p>
+<div class="flex flex-wrap justify-center gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm rounded-full">Class of 2005</span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm rounded-full">Art</span>
+</div>
+<div class="w-full flex flex-col gap-3">
+<button class="w-full bg-primary-fixed text-on-primary-fixed font-bold py-3 rounded-lg hover:opacity-90 transition-opacity">Connect</button>
+<button class="w-full bg-transparent border border-on-surface text-on-surface font-bold py-3 rounded-lg hover:bg-surface-container-low transition-colors">View Profile</button>
+</div>
+</div>
+</div>
+<!-- Card 6 (Yellow Tonal Background) -->
+<div class="bg-primary-container p-10 rounded-xl border border-outline-variant hover:border-primary-fixed transition-colors group">
+<div class="flex flex-col items-center text-center">
+<img class="w-24 h-24 rounded-full mb-6 object-cover border-4 border-white/50" data-alt="Professional headshot of a smiling man in a high-tech startup environment. The scene is bright and airy with modern furniture in the background. The lighting emphasizes a friendly and high-energy professional vibe, perfectly aligned with a tech-forward alumni platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANZBW5h46TAD6KhH4QV6O7WwVZrSL8p8-r0-DrKQfVW7UlpXPnoyOV3VcmT1s3W7eChPpZjcoqS0pB02BXD8i4dVjbCc6PEXNuy9TBSI3cUUs7_VkjzASr8mAHa3M4BAK3TTgYAUxcRsdIPcZySeOZocosh5RkbtBdHcKk8NjT-iZiJLaoPptlzZHBN5O82s_UnRgOIBTTHQhgQs6qe8wOc_m16a3zEzXAo-t3g3jk6SB891m12tYbQr_1ZBjBsVcCoC3CYQQlU2AO"/>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Jameson Blake</h3>
+<p class="font-body-md text-body-md text-on-primary-container mb-4">Founder of SustainaCorp</p>
+<div class="flex flex-wrap justify-center gap-2 mb-8">
+<span class="px-3 py-1 bg-white/60 text-on-surface-variant font-label-sm text-label-sm rounded-full">Class of 2018</span>
+<span class="px-3 py-1 bg-white/60 text-on-surface-variant font-label-sm text-label-sm rounded-full">Founder</span>
+</div>
+<div class="w-full flex flex-col gap-3">
+<button class="w-full bg-white text-on-surface font-bold py-3 rounded-lg hover:bg-surface-container-low transition-colors">Connect</button>
+<button class="w-full bg-transparent border border-on-surface text-on-surface font-bold py-3 rounded-lg hover:bg-white/40 transition-colors">View Profile</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-2">
+<button class="p-2 rounded hover:bg-surface-container-low text-secondary"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="w-10 h-10 rounded bg-primary text-on-primary font-bold">1</button>
+<button class="w-10 h-10 rounded hover:bg-surface-container-low text-secondary font-bold">2</button>
+<button class="w-10 h-10 rounded hover:bg-surface-container-low text-secondary font-bold">3</button>
+<span class="px-2 text-secondary">...</span>
+<button class="w-10 h-10 rounded hover:bg-surface-container-low text-secondary font-bold">12</button>
+<button class="p-2 rounded hover:bg-surface-container-low text-secondary"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 max-w-max-width mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface mb-4">Alumni Connect</div>
+<p class="text-body-md font-body-md text-on-surface dark:text-on-surface-variant max-w-sm">© 2024 Alumni Connect. Building a modern heritage.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 text-label-sm font-label-sm" href="#">About Us</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 text-label-sm font-label-sm" href="#">Mentors</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 text-label-sm font-label-sm" href="#">Privacy Policy</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 text-label-sm font-label-sm" href="#">Contact</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 text-label-sm font-label-sm" href="#">Community Guidelines</a>
+</div>
+</div>
+</footer>
+</body></html>

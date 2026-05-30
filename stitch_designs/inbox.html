@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface-variant": "#444934",
+                    "tertiary-fixed": "#f7dcdc",
+                    "outline": "#757962",
+                    "secondary-fixed-dim": "#c3c7cb",
+                    "secondary-container": "#dce0e4",
+                    "outline-variant": "#c5c9ae",
+                    "on-secondary-fixed": "#171c1f",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e5e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#add500",
+                    "surface-container-high": "#eae7e7",
+                    "on-primary-fixed": "#171e00",
+                    "tertiary-container": "#ffeaea",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#313030",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-background": "#1c1b1b",
+                    "surface-tint": "#516600",
+                    "surface-container-highest": "#e5e2e1",
+                    "primary-container": "#d4ff3e",
+                    "surface-bright": "#fcf9f8",
+                    "on-primary-fixed-variant": "#3d4d00",
+                    "on-primary": "#ffffff",
+                    "surface": "#fcf9f8",
+                    "inverse-primary": "#add500",
+                    "surface-container": "#f0eded",
+                    "on-primary-container": "#5d7400",
+                    "background": "#fcf9f8",
+                    "tertiary": "#6d5a5a",
+                    "on-secondary-container": "#5e6367",
+                    "secondary": "#5a5f62",
+                    "on-surface": "#1c1b1b",
+                    "primary-fixed": "#c8f230",
+                    "on-tertiary-container": "#7b6767",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f6f3f2",
+                    "secondary-fixed": "#dfe3e7",
+                    "primary": "#516600",
+                    "on-secondary-fixed-variant": "#43474b",
+                    "tertiary-fixed-dim": "#dac1c1",
+                    "on-tertiary-fixed": "#261818",
+                    "surface-dim": "#dcd9d9",
+                    "on-tertiary-fixed-variant": "#544243"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-desktop": "80px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "max-width": "1280px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-xl": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container-low docked full-width top-0 z-50 sticky">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-on-surface">Alumni Connect</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-secondary hover:text-on-surface font-body-md transition-colors duration-200" href="#">Features</a>
+<a class="text-secondary hover:text-on-surface font-body-md transition-colors duration-200" href="#">Directory</a>
+<a class="text-secondary hover:text-on-surface font-body-md transition-colors duration-200" href="#">Mentorship</a>
+<a class="text-secondary hover:text-on-surface font-body-md transition-colors duration-200" href="#">Events</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-full text-on-surface-variant" data-icon="dark_mode">dark_mode</button>
+<button class="hidden md:block px-6 py-2 bg-primary-fixed text-on-primary-fixed font-label-sm rounded-full font-bold active:scale-95 transition-transform">Get Started</button>
+<button class="md:hidden material-symbols-outlined p-2" data-icon="menu">menu</button>
+</div>
+</div>
+</header>
+<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-10 md:py-20">
+<!-- Inbox Layout: Bento Style -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Sidebar: Conversations List -->
+<section class="lg:col-span-4 bg-white rounded-xl border-2 border-outline-variant overflow-hidden">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
+<h1 class="font-headline-md text-headline-md text-on-surface">Messages</h1>
+<button class="material-symbols-outlined text-primary p-2 bg-primary-container rounded-lg" data-icon="edit_square">edit_square</button>
+</div>
+<div class="p-4 bg-surface-bright">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white border border-outline-variant rounded-lg focus:outline-none focus:border-primary-fixed transition-colors text-body-md" placeholder="Search conversations..." type="text"/>
+</div>
+</div>
+<div class="divide-y divide-outline-variant max-h-[600px] overflow-y-auto">
+<!-- Unread Conversation -->
+<div class="p-4 flex gap-4 bg-primary-container/10 border-l-4 border-primary cursor-pointer hover:bg-primary-container/20 transition-colors">
+<div class="relative">
+<img alt="" class="w-14 h-14 rounded-full object-cover border-2 border-white" data-alt="A professional headshot of a smiling woman with glasses, standing against a soft-focus architectural background. The lighting is bright and optimistic, reflecting a modern minimalist aesthetic with a clean, high-key white color palette. The image feels accessible and professional, ideal for a networking platform interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9gCwcb6_XTQ6NBnGcTd99FU2q5lAOh5vp_PQ6EHGuy9Vjtwk3VFHwa6ogTdVO6caj9rrsNWl1oVqbCKMAlBPm_mTzg2tEx-do6Wzk2YWImyZrNBysqj-iyKxqIv1lFFBJfcwmhv06-w_BH5-X0a95NqkZVEmZWOwXp2wHs_zKvmSJGctiwc2-Nkpa_nXTI84n7-cp-dLHNT3aLk1YvjGkc9dqWEVuG4H4E_yf83CarO3jsoGMM8yJl2ojZRbR4e1Hanx1RYqL59NZ"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-primary rounded-full border-2 border-white"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h3 class="font-label-sm text-on-surface truncate">Sarah Jenkins</h3>
+<span class="text-[12px] font-bold text-primary">2m ago</span>
+</div>
+<p class="text-body-md font-bold text-on-surface truncate">The marketing deck looks great!</p>
+<span class="text-label-sm text-secondary truncate block italic">"Let's finalize the proposal by..."</span>
+</div>
+</div>
+<!-- Read Conversation -->
+<div class="p-4 flex gap-4 bg-white cursor-pointer hover:bg-surface-container transition-colors">
+<img alt="" class="w-14 h-14 rounded-full object-cover border border-outline-variant" data-alt="A portrait of a male professional in a clean white shirt, looking directly at the camera with a confident, friendly expression. The background is a minimalist grey texture, ensuring focus on the subject. The lighting is natural and balanced, fitting the professional-minimalist brand identity perfectly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARxXu4VB2ZoUtxchTCI3F35tCI5ahb09mHhm6_dFmEkjDnjI3dL1dwmLzHLun4obz1FbYKzZcpJXvgTnbKJUs7JidCgxcMajzshR1aulhmU5Ead0DL7TmK0tly81NQ1IWO_K1kLk0USTeDak5PjD4Wc8fYhgc44iH7GzPAtoOgWMc99yrxqWsqvlUzmW_TgpMQ8udYqH7lDOJ1GFsm4aCeRr-jaixlRKjGbgO0J79uRgVQ2ZbFZTMBWRV5GHuRqFmy091RYXNIdWQG"/>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h3 class="font-label-sm text-on-surface truncate">Marcus Chen</h3>
+<span class="text-[12px] text-secondary">1h ago</span>
+</div>
+<p class="text-body-md text-secondary truncate">Thanks for the mentorship session.</p>
+</div>
+</div>
+<!-- Read Conversation -->
+<div class="p-4 flex gap-4 bg-white cursor-pointer hover:bg-surface-container transition-colors">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-bold text-headline-md">ED</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h3 class="font-label-sm text-on-surface truncate">Engineering Dept.</h3>
+<span class="text-[12px] text-secondary">Yesterday</span>
+</div>
+<p class="text-body-md text-secondary truncate">New event: Tech Mixer 2024</p>
+</div>
+</div>
+<!-- Read Conversation -->
+<div class="p-4 flex gap-4 bg-white cursor-pointer hover:bg-surface-container transition-colors">
+<img alt="" class="w-14 h-14 rounded-full object-cover border border-outline-variant" data-alt="Close up of a professional woman with a welcoming expression, set in a modern office environment with blurred plants and bright windows. The color palette is dominated by soft steel and warm white tones, maintaining a calm and professional atmosphere consistent with high-end UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW5IpksIMqkQEyKAU__shmcsHfSgmVVyXguV3mB8Xk8k2d3ckM-zvhrstAr2AaV8TRP8fkzSrBpDcAOoI-byN4yxdRSnkW-ddneSfYDAkqM5aZKy1vlCc-3SPe2HksF7nnEJWbT7SrxFO2vi1gP6dGIEHKis-76vkHXMxEMHil59jUM2Syp5scfcWlJBlpkOpqxMmXM5ab0ThR1QH6WUiTuFIVRs6rWv1cY2Rb7IaJTzvCZohVXBaDIh7gG6kQns3aMtfWWsLqT8ZA"/>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h3 class="font-label-sm text-on-surface truncate">Dr. Elena Rodriguez</h3>
+<span class="text-[12px] text-secondary">Tue</span>
+</div>
+<p class="text-body-md text-secondary truncate">The research paper has been approved for publication.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content: Message View (Active Conversation) -->
+<section class="lg:col-span-8 bg-white rounded-xl border-2 border-outline-variant flex flex-col h-[700px]">
+<!-- Header -->
+<div class="p-6 border-b border-outline-variant flex justify-between items-center">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="" class="w-12 h-12 rounded-full object-cover" data-alt="A professional headshot of a smiling woman with glasses, standing against a soft-focus architectural background. The lighting is bright and optimistic, reflecting a modern minimalist aesthetic with a clean, high-key white color palette. The image feels accessible and professional, ideal for a networking platform interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAJOYE1dwOGGFgGR4t76is2m0vbV6s1Va7N7GxmWvMAIYi4BqUJllH6OSeIckPFMBOPMWHzoeTtxtEJqHD5nF3e6H0IQOOOFE8rhSwAfVmR3LRuC9V__AYYMDQ8nV7nvHuxD76HdJdn4H7S0yyWvOUmhAWmKawHQ3ua3eEwx3QtlzbDNjz_BWYW7ZtekftfRH28I0csMNVGqZaEg2RdEnotLd42HwQzeVynSdYbTE77vV7ZpIC1fBpq8V5vit4zB0dWaklOW_539Ks"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-primary rounded-full border-2 border-white"></div>
+</div>
+<div>
+<h2 class="font-label-sm text-on-surface">Sarah Jenkins</h2>
+<p class="text-[12px] text-primary font-bold">Online</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-full text-secondary" data-icon="videocam">videocam</button>
+<button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-full text-secondary" data-icon="info">info</button>
+</div>
+</div>
+<!-- Chat Canvas -->
+<div class="flex-1 p-8 overflow-y-auto bg-surface-container-low space-y-6">
+<div class="flex justify-center">
+<span class="bg-outline-variant/30 text-on-surface-variant px-4 py-1 rounded-full text-[12px] font-bold">TODAY</span>
+</div>
+<!-- Received Message -->
+<div class="flex items-start gap-3 max-w-[80%]">
+<img alt="" class="w-8 h-8 rounded-full object-cover" data-alt="A professional headshot of a smiling woman with glasses, standing against a soft-focus architectural background. The lighting is bright and optimistic, reflecting a modern minimalist aesthetic with a clean, high-key white color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNFC2I4gIp__TGyfrMwf6eQKyBuTsnltkIxRcXbLxnrKmynG_e1YhwdG8v6mSB0vBjYmIljTx5gT-JNI42Avr58AK5vuxBxLUXzt4aUaNxZmnA0qkODuR7jGXMqqDZNWbGfTJzFBRH3oAGwaVRlTE62gwvBaozGPe0-HeO7timNDSN68R6h4dJtaKnszA5YiS27DfoA3IOV76lFZRJXGcwi1kXZUL_gks3k9FmkHj8eK-KPhygT9pqqnkSxsyFm4e2HeYCbbFhTbL1"/>
+<div class="bg-white border border-outline-variant p-4 rounded-xl rounded-tl-none">
+<p class="text-body-md text-on-surface">Hi there! I've just finished reviewing the draft for the new mentorship program. The marketing deck looks great!</p>
+<span class="text-[10px] text-secondary mt-2 block">10:42 AM</span>
+</div>
+</div>
+<!-- Sent Message -->
+<div class="flex items-start gap-3 flex-row-reverse ml-auto max-w-[80%]">
+<div class="bg-primary-container p-4 rounded-xl rounded-tr-none">
+<p class="text-body-md text-on-primary-container">That's fantastic news! Did you have any specific notes on the peer-to-peer section?</p>
+<span class="text-[10px] text-on-primary-container/70 mt-2 block text-right">10:45 AM</span>
+</div>
+</div>
+<!-- Received Message (Unread Indicator) -->
+<div class="flex items-start gap-3 max-w-[80%]">
+<img alt="" class="w-8 h-8 rounded-full object-cover" data-alt="A professional headshot of a smiling woman with glasses, standing against a soft-focus architectural background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs3EZq4Bfwm8ANYsaoJEUsMQ0rC9hzrGco2kbKNkcbNP3IgsJKYHf3PzmakEAh6R8gfc85VYM5PPN3Xjh5giG72jbPEYfI7qdrq5qpVymgshU65CQRwL6OEJp_zQkXWg8LHwTbm6JusPeu70C1oQzK5YEELOXJKwuRAi3Xyu58r7w5y2s504M8yjFAzjpwbA5OB2QI40GKbLqapKqFjsFDclLysSVQcmFxAbrsYMdc3h7AAIxlUO8nczCvty7qb86fyRxNAwx0bJl9"/>
+<div class="bg-white border border-outline-variant p-4 rounded-xl rounded-tl-none shadow-sm">
+<p class="text-body-md text-on-surface">Let's finalize the proposal by the end of today so we can present it tomorrow. I think the P2P section is perfect as is.</p>
+<span class="text-[10px] text-secondary mt-2 block">2 minutes ago</span>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-6 border-t border-outline-variant bg-white">
+<div class="flex items-center gap-4 bg-surface-container-low p-2 border-2 border-outline-variant rounded-xl focus-within:border-primary transition-colors">
+<button class="material-symbols-outlined text-secondary hover:text-primary transition-colors p-1" data-icon="add_circle">add_circle</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-body-md text-on-surface" placeholder="Type a message..." type="text"/>
+<button class="material-symbols-outlined text-secondary hover:text-primary transition-colors p-1" data-icon="mood">mood</button>
+<button class="bg-primary-fixed text-on-primary-fixed p-2 rounded-lg material-symbols-outlined" data-icon="send" data-weight="fill">send</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 max-w-max-width mx-auto gap-8">
+<div class="text-center md:text-left">
+<div class="text-headline-md font-headline-md font-bold text-on-surface mb-2">Alumni Connect</div>
+<p class="text-label-sm text-secondary">© 2024 Alumni Connect. Building a modern heritage.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 font-label-sm" href="#">About Us</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 font-label-sm" href="#">Mentors</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 font-label-sm" href="#">Privacy Policy</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 font-label-sm" href="#">Contact</a>
+<a class="text-secondary hover:text-on-surface hover:underline transition-all duration-200 font-label-sm" href="#">Community Guidelines</a>
+</div>
+</div>
+</footer>
+</body></html>
