@@ -137,7 +137,7 @@
                     Reconnect with your heritage, access exclusive mentorship, and grow your professional network within the Alumni Connect community.
                 </p>
 <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container-low">
-<img alt="Graduates collaborating" class="object-cover w-full h-full opacity-90" data-alt="A candid, warm-toned photograph of three diverse young professionals laughing and collaborating around a wooden table in a sun-drenched, modern university library." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACje0HTbq5NQ_hDKSlQCK2YEQ8Zq3rY6sgRrR0QYquh6wi21kEP-C_-iAZNWDiqkeJyPhaJ1eNRpN_MHtN3Ofu7L2bnuFr-fxLfyA5v_Rdob1tDgOvzQhWVefn06xfhForJ3_JbvSB2I9IuYckG5dfVYTZDWsmaLOBJ_7Hbo4cLtNvCXlOcmOnyfqrXtCUvxDO_R_FlpnwoHShdwA9BmniJgZMIPuwRk4kU_w6Rlw8neGnLFFzEiNIbbxfb3QE3kNHgmA8DAZDhUU2"/>
+<img alt="Graduates collaborating" class="object-cover w-full h-full opacity-90" data-alt="A candid, warm-toned photograph of three diverse young professionals laughing and collaborating around a wooden table in a sun-drenched, modern university library." src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1100&q=80"/>
 </div>
 </div>
 <div class="col-span-1 md:col-span-6 flex justify-center lg:justify-end">

@@ -158,7 +158,7 @@
 </div>
 <div class="relative group">
 <div class="absolute -inset-4 bg-primary-container rounded-[2rem] rotate-3 opacity-20 group-hover:rotate-1 transition-transform"></div>
-<img alt="" class="relative rounded-2xl shadow-2xl w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-[1.02] dark:shadow-[0_0_20px_rgba(212,255,62,0.15)]" src="https://lh3.googleusercontent.com/aida/ADBb0ujWOZ8buOF7lIgxr_1ZNVmI-uqrTc2_osnIYH9-gIEpRDNRPVOsYT_SR1s4vPXZhq6CCe_aMxWQDbEL3ephuBpaGMmRrbYblp16ypQl8GXUYbL5_AfdGiPPROcWVrVFP_dbYcn1q66yX_q-rmin2q3umPd9kqC2VWRfvMJXpqcF89J3KpYrUTLav6anBcqubBLsgS4g8x8IUNonuMMFsdR1qTEjJOTkjcs3osa1ctBebIIDyUZr05mLT3xJ"/>
+<img alt="" class="relative rounded-2xl shadow-2xl w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-[1.02] dark:shadow-[0_0_20px_rgba(212,255,62,0.15)]" src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1100&q=80"/>
 </div>
 </div>
 </section>
@@ -227,7 +227,7 @@
 <!-- Team Member 1 -->
 <div class="group">
 <div class="relative overflow-hidden rounded-2xl aspect-square mb-6">
-<img alt="" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ui-oVzdBStX7VKV-YU2eQAYrN4J_smWAB6SjzPh-8BubxHKxEvT2Hy4oiAQ8jQVbAhIi8tD-2e1RY-NP2AsYJzzMzo29WprPedr1yGXs1F_o051xootMeT9xgfXKRZxodlUdpGzLlUM2CAIp3XJXko-H63Noa1F832VujUbxUptLSVU1Gsov8Q4fVrvUHdIxR1w-iJGRLq_rWlmwU9bBMyulUlLIQZO64Rj5Say3PRySgoGXlN1vUyQvmGS"/>
+<img alt="" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1100&q=80"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
 </div>
 <h4 class="font-headline-md text-headline-md dark:text-[#e3e3e3] mb-1">Dr. Sarah Chen</h4>
@@ -237,7 +237,7 @@
 <!-- Team Member 2 -->
 <div class="group">
 <div class="relative overflow-hidden rounded-2xl aspect-square mb-6">
-<img alt="" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ujMGJdhkVhlC1lXkbDH-wXvMXhxMi4SYHsDYIGiLYYrd4smL7GyMwjicB3dC7da6jfPyqkNjtI0Gl_nQzUmnq9pqzLB6VTlfIIYfsSWwSug4Cl40Mie49S8zqiXtTU6Ea4mMChZwB0_wYzZx_k1Qsvopsv5ywtcxe9JttymvnEvyffYfRSseIN9mzIFh6huSh6IPplx2Fyl5qjYeOqBIkuJISfKsUiouWfTMNAkWsGToY1AdSZ0I2Ju3dM"/>
+<img alt="" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1100&q=80"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
 </div>
 <h4 class="font-headline-md text-headline-md dark:text-[#e3e3e3] mb-1">Marcus Thorne</h4>
@@ -247,7 +247,7 @@
 <!-- Team Member 3 (Placeholder for variety) -->
 <div class="group">
 <div class="relative overflow-hidden rounded-2xl aspect-square mb-6 bg-surface-container-high dark:bg-[#1a1c16] flex items-center justify-center">
-<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Professional headshot of an Asian woman in her late 20s, wearing a modern blazer, smiling warmly in a bright, airy office environment. The lighting is natural and flattering, emphasizing a professional and approachable mood. The aesthetic is clean and minimalist, aligning with a high-end corporate networking platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLZtXyF-iLAL3o9cm7805aDw3xI7ZuRJCobv329JMyTfPC-biAZ1OPcyYUUfmsRTyjcNQl8IdtwbcJsyJafB7EKZdTz4RgP2FrbEg34dxeH2vtO0q5-Tj0JyroBmGdQEh63SuJEsJyZuIv8vgJjOPMbNgVyDJL90DGgUMhsjB2m57PeTsVI8Jix3iYTX6oa4VJWnvuUAYNVn5b-4BcJFlinbij8l4NtyLB4iejTxfpUp4nzqPEl4rWWceZX3b4t2Jw-V8lGCaQ0iei"/>
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Professional headshot of an Asian woman in her late 20s, wearing a modern blazer, smiling warmly in a bright, airy office environment. The lighting is natural and flattering, emphasizing a professional and approachable mood. The aesthetic is clean and minimalist, aligning with a high-end corporate networking platform." src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1100&q=80"/>
 </div>
 <h4 class="font-headline-md text-headline-md dark:text-[#e3e3e3] mb-1">Elena Ruiz</h4>
 <p class="text-primary font-bold text-label-sm uppercase mb-3">CTO</p>
@@ -256,7 +256,7 @@
 <!-- Team Member 4 (Placeholder for variety) -->
 <div class="group">
 <div class="relative overflow-hidden rounded-2xl aspect-square mb-6 bg-surface-container-high dark:bg-[#1a1c16] flex items-center justify-center">
-<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Professional headshot of a middle-aged Black man with a confident expression, wearing a high-quality navy suit against a soft-focus architectural background. The image has a sophisticated, premium look with warm lighting and a sharp focus on his features, evoking a sense of leadership and trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyMJ3gzH817AuGUBAHNsGqu8EOqg03znk8hGJ8edtckn3oflLMACrAKRJCU17hYGpZQzi-DQn6y1TegA6DZsHriRgIRDIqPVmVmmEzfeMTXFC014c_fJ2wPQKepn4_q6LViKz9upln6uhQe4PCmFxPyA34feschiO--svMYS5Ldvq4ldMRz39B1xZ9Abs17FSvjFzcoA-kqfJKRdFVENb9GpYVjQ28K6TJzAhEO-w0ksJIlnb605TGvYVWNjE7a5PGtE0gnOVb-SZR"/>
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Professional headshot of a middle-aged Black man with a confident expression, wearing a high-quality navy suit against a soft-focus architectural background. The image has a sophisticated, premium look with warm lighting and a sharp focus on his features, evoking a sense of leadership and trust." src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1100&q=80"/>
 </div>
 <h4 class="font-headline-md text-headline-md dark:text-[#e3e3e3] mb-1">David Okafor</h4>
 <p class="text-primary font-bold text-label-sm uppercase mb-3">Product Lead</p>

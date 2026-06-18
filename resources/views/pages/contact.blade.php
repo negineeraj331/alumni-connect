@@ -135,7 +135,7 @@
 </div>
 <div class="relative dark:shadow-[0_0_20px_rgba(212,255,62,0.15)] rounded-3xl">
 <div class="absolute inset-0 bg-primary-container/20 rounded-3xl -rotate-2 -z-10"></div>
-<img alt="Professional connection" class="w-full h-auto rounded-3xl object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida/ADBb0uhUygNCTnIpRtab94KC_RnbTbStoGmPA0I3Lt2VqKukK30M0NnXVWGmUoKbYTONRi7VY4TiPjaQBlGGUEkZdcdPx9FLFoU0DZqy8NrQj5xeBoqrWpIITvQBq3szkM3ge57FhBK7PIzn7zgwmaCmbDKWIgSmv2r7mDB_pLQmfB1svALlwVUsuQL-eNTBN8_eWwJE13Xy0iAppXZB16sKBKYQcmvhEDjes3_AIU5qstimt8DYDHKf_Ir_lrY">
+<img alt="Professional connection" class="w-full h-auto rounded-3xl object-cover shadow-sm" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1100&q=80">
 </div>
 </section>
 <!-- Contact Content Section -->
@@ -183,7 +183,7 @@
 </div>
 <!-- Map Placeholder -->
 <a href="https://maps.google.com/?q=Lovely+Professional+University" target="_blank" rel="noopener noreferrer" class="block rounded-3xl overflow-hidden h-64 relative group dark:shadow-[0_0_20px_rgba(212,255,62,0.15)] cursor-pointer">
-<img class="w-full h-full object-cover grayscale brightness-110 group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0WEJ7vOVXRPtmtLn1bckF_IG_xgrm2_WUmjfre239lX47Jgxh7k6ljpW6EY0mdBbaTRVVHVbezeVnxHucT0r80zH52wjf8CiBKhPzchlxU-p4ybmt1MczblvDB_RLY4I-bOWCpm1luBK_kljxj5weFqGAoGVcMzRsGzlWAb9Rx2wH-GQC2DWm3MlT_CdgfYpvSB24YkCMof-LIG-KKYGus5jvkjRS70PrDpe_RP3gNP27KT1lE08GcWin_Jui--t2W2yhWh6o7lDR">
+<img class="w-full h-full object-cover grayscale brightness-110 group-hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1100&q=80">
 <div class="absolute inset-0 flex items-center justify-center">
 <div class="bg-primary text-on-primary px-4 py-2 rounded-full font-bold shadow-lg group-hover:scale-105 transition-transform">Our HQ</div>
 </div>

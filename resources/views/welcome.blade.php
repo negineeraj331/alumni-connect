@@ -203,6 +203,22 @@
         .backface-hidden { backface-visibility: hidden; }
         .rotate-y-180 { transform: rotateY(180deg); }
         .group-flip:hover .flip-inner { transform: rotateY(180deg); }
+
+        /* Hero dynamic background slideshow */
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transform: scale(1.05);
+            transition: opacity 1.6s ease-in-out, transform 8s ease-in-out;
+            will-change: opacity, transform;
+        }
+        .hero-slide.is-active {
+            opacity: 1;
+            transform: scale(1);
+        }
     </style>
 </head>
 <body class="bg-surface dark:bg-[#0f1115] text-on-surface dark:text-[#e3e3e3] dark:text-gray-100 font-body-md selection:bg-primary-container selection:text-on-primary-container transition-colors duration-500">
@@ -240,8 +256,13 @@
     <!-- Hero Section -->
     <section class="relative min-h-[80vh] flex items-center overflow-hidden bg-surface-container-low dark:bg-[#1a1c21] transition-colors duration-500">
         <div class="absolute inset-0 z-0 overflow-hidden">
-            <!-- Enhanced Background Image -->
-            <img alt="Welcome Illustration" class="w-full h-full object-cover animate-pulse-slow" src="https://lh3.googleusercontent.com/aida/ADBb0ujWOZ8buOF7lIgxr_1ZNVmI-uqrTc2_osnIYH9-gIEpRDNRPVOsYT_SR1s4vPXZhq6CCe_aMxWQDbEL3ephuBpaGMmRrbYblp16ypQl8GXUYbL5_AfdGiPPROcWVrVFP_dbYcn1q66yX_q-rmin2q3umPd9kqC2VWRfvMJXpqcF89J3KpYrUTLav6anBcqubBLsgS4g8x8IUNonuMMFsdR1qTEjJOTkjcs3osa1ctBebIIDyUZr05mLT3xJ"/>
+            <!-- Dynamic rotating background slideshow -->
+            <div class="hero-bg absolute inset-0">
+                <div class="hero-slide is-active" style="background-image:url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1920&q=80')"></div>
+                <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1920&q=80')"></div>
+                <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80')"></div>
+                <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1920&q=80')"></div>
+            </div>
             <div class="absolute inset-0 bg-surface/70 dark:bg-[#0f1115]/80 backdrop-blur-[2px]"></div>
             <!-- Glowing accent in dark mode -->
             <div class="absolute inset-0 bg-gradient-to-r from-primary-container/0 to-primary-container/0 dark:from-primary-container/10 dark:to-transparent transition-colors duration-500"></div>
@@ -361,7 +382,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="order-2 lg:order-1 relative reveal-card">
                 <div class="absolute inset-0 bg-primary-container/20 blur-3xl rounded-[2.5rem] dark:bg-primary-container/10 dark:bg-primary-container/20 animate-pulse-slow"></div>
-                <img alt="Mission Illustration" class="w-full h-auto rounded-[2.5rem] relative z-10 shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsiYqE7ONyFKfJNxY2EL8D04WnDkrfvCL1x217-cdPPAXhwFrVsvWW1s7C3frLFQVVKYvo9aaRoRcHeE04pgW8GcJovgJ8uEw7dJ4fodiHiPxwxDFDSPndbuaNDJz4QP8P-BhonE5n8UTIHGUid9BsHWj0nCfBfcRlfR_BjPGQ5Tq7bHHf-65_et9F57EI52_VEhmGXwrpdiyRqBPGGi7sNbpO03OdtfsmSMYjyfREgbvBDP3sAifs5ZEH8-3McFF1-eMGV8DZo-v1"/>
+                <img alt="Mission Illustration" class="w-full h-auto rounded-[2.5rem] relative z-10 shadow-2xl" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80"/>
                 <!-- Floating Decorative Badge -->
                 <div class="absolute -bottom-6 -right-6 bg-surface dark:bg-[#1a1c21] p-6 rounded-3xl shadow-2xl border border-outline-variant dark:border-[#444934] dark:border-gray-800 z-20 animate-float hidden md:block">
                     <div class="flex items-center gap-4">
@@ -414,7 +435,7 @@
                         <p class="text-secondary dark:text-[#a0a5a8] dark:text-gray-400 mb-6">Forge powerful partnerships with verified peers across any industry.</p>
                     </div>
                     <div class="mt-auto px-8 pb-8">
-                        <img alt="Alumni Connections" class="w-full h-48 object-contain opacity-90 dark:opacity-80 transition-transform duration-500 hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uhUygNCTnIpRtab94KC_RnbTbStoGmPA0I3Lt2VqKukK30M0NnXVWGmUoKbYTONRi7VY4TiPjaQBlGGUEkZdcdPx9FLFoU0DZqy8NrQj5xeBoqrWpIITvQBq3szkM3ge57FhBK7PIzn7zgwmaCmbDKWIgSmv2r7mDB_pLQmfB1svALlwVUsuQL-eNTBN8_eWwJE13Xy0iAppXZB16sKBKYQcmvhEDjes3_AIU5qstimt8DYDHKf_Ir_lrY"/>
+                        <img alt="Alumni Connections" class="w-full h-48 object-contain opacity-90 dark:opacity-80 transition-transform duration-500 hover:scale-110" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80"/>
                     </div>
                 </div>
                 <!-- Mentorship & Growth -->
@@ -424,7 +445,7 @@
                         <p class="text-secondary dark:text-[#a0a5a8] dark:text-gray-400 mb-6">Learn from those who've walked your path and achieve your career goals.</p>
                     </div>
                     <div class="mt-auto px-8 pb-8">
-                        <img alt="Mentorship &amp; Growth" class="w-full h-48 object-contain opacity-90 dark:opacity-80 transition-transform duration-500 hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0ugZJjwufeZ2nRZQ5svxG5FvHI5umHq84x1Ee5UpWCj5caFhNUWqJQc5owAh0o9YSFqRcQ1D-cxyQjC4Pyeec7EOjMgTL2MUY_L6KUFvj4xOoz-dTWE6V9Cy4BMOUeUpJl_aYg1dOwPijX3ylXCkCAd7eFboO2P-5-JFU9QNILL5Q9phzhL-Xi8B4xEH-l1QqG7yG2ZGNxGb5xsc0W-BW-6kVkVmn0t0nrt2JSOf71tCN8sxgNhTXsWZSxYv"/>
+                        <img alt="Mentorship &amp; Growth" class="w-full h-48 object-contain opacity-90 dark:opacity-80 transition-transform duration-500 hover:scale-110" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"/>
                     </div>
                 </div>
                 <!-- Events & Networking (Updated with Image) -->
@@ -588,11 +609,11 @@
         </div>
         <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
             <div class="text-center mb-16 reveal-card">
-                <h2 class="text-headline-lg font-bold dark:text-white">The Founders behind the connection.</h2>
-                <p class="text-body-lg text-secondary dark:text-[#a0a5a8] dark:text-gray-400 max-w-2xl mx-auto mt-4">We are a dedicated team of developers building the bridge between education and professional success.</p>
+                <h2 class="text-headline-lg font-bold dark:text-white">The founder behind the connection.</h2>
+                <p class="text-body-lg text-secondary dark:text-[#a0a5a8] dark:text-gray-400 max-w-2xl mx-auto mt-4">Building the bridge between education and professional success.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="max-w-sm mx-auto">
                 <!-- Flip Card 1: Neeraj Negi -->
                 <div class="group-flip h-[380px] w-full perspective-1000 cursor-pointer reveal-card">
                     <div class="relative w-full h-full transition-transform duration-700 transform-style-3d flip-inner shadow-xl rounded-3xl">
@@ -614,47 +635,6 @@
                     </div>
                 </div>
 
-                <!-- Flip Card 2: Rishav Kumar -->
-                <div class="group-flip h-[380px] w-full perspective-1000 cursor-pointer reveal-card" style="transition-delay: 100ms;">
-                    <div class="relative w-full h-full transition-transform duration-700 transform-style-3d flip-inner shadow-xl rounded-3xl">
-                        <!-- Front -->
-                        <div class="absolute inset-0 backface-hidden bg-surface-container-lowest dark:bg-[#1a1c21] rounded-3xl p-8 flex flex-col items-center justify-center border border-outline-variant dark:border-[#444934] dark:border-gray-800">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" class="w-36 h-36 rounded-full object-cover mb-6 border-4 border-surface shadow-md">
-                            <h4 class="font-bold text-2xl dark:text-white mb-2">Rishav Kumar</h4>
-                            <p class="text-primary dark:text-primary-container font-bold uppercase tracking-widest text-sm">Backend Developer</p>
-                        </div>
-                        <!-- Back -->
-                        <div class="absolute inset-0 backface-hidden rotate-y-180 bg-primary-container dark:bg-[#2a3014] rounded-3xl p-8 flex flex-col items-center justify-center text-center">
-                            <h4 class="font-bold text-2xl text-on-primary-container dark:text-white mb-4">Rishav Kumar</h4>
-                            <p class="text-on-primary-container/80 dark:text-gray-300 mb-6">Master of server-side logic, API integrations, and ensuring high performance and responsiveness of requests from the front-end.</p>
-                            <div class="flex gap-4">
-                                <a href="#" class="w-10 h-10 rounded-full bg-surface/20 flex items-center justify-center hover:bg-surface/40 transition-colors"><span class="material-symbols-outlined text-on-primary-container dark:text-white">terminal</span></a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-surface/20 flex items-center justify-center hover:bg-surface/40 transition-colors"><span class="material-symbols-outlined text-on-primary-container dark:text-white">storage</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Flip Card 3: Md Abdul Basit -->
-                <div class="group-flip h-[380px] w-full perspective-1000 cursor-pointer reveal-card" style="transition-delay: 200ms;">
-                    <div class="relative w-full h-full transition-transform duration-700 transform-style-3d flip-inner shadow-xl rounded-3xl">
-                        <!-- Front -->
-                        <div class="absolute inset-0 backface-hidden bg-surface-container-lowest dark:bg-[#1a1c21] rounded-3xl p-8 flex flex-col items-center justify-center border border-outline-variant dark:border-[#444934] dark:border-gray-800">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" class="w-36 h-36 rounded-full object-cover mb-6 border-4 border-surface shadow-md">
-                            <h4 class="font-bold text-2xl dark:text-white mb-2">Md Abdul Basit</h4>
-                            <p class="text-primary dark:text-primary-container font-bold uppercase tracking-widest text-sm">Frontend Developer</p>
-                        </div>
-                        <!-- Back -->
-                        <div class="absolute inset-0 backface-hidden rotate-y-180 bg-primary-container dark:bg-[#2a3014] rounded-3xl p-8 flex flex-col items-center justify-center text-center">
-                            <h4 class="font-bold text-2xl text-on-primary-container dark:text-white mb-4">Md Abdul Basit</h4>
-                            <p class="text-on-primary-container/80 dark:text-gray-300 mb-6">Crafting intuitive user interfaces, fluid animations, and ensuring pixel-perfect responsive designs across all devices and browsers.</p>
-                            <div class="flex gap-4">
-                                <a href="#" class="w-10 h-10 rounded-full bg-surface/20 flex items-center justify-center hover:bg-surface/40 transition-colors"><span class="material-symbols-outlined text-on-primary-container dark:text-white">brush</span></a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-surface/20 flex items-center justify-center hover:bg-surface/40 transition-colors"><span class="material-symbols-outlined text-on-primary-container dark:text-white">devices</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -875,6 +855,18 @@
         el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
         observer.observe(el);
     });
+
+    // Hero background slideshow — cycle through the slides
+    (function () {
+        const slides = document.querySelectorAll('.hero-bg .hero-slide');
+        if (slides.length < 2) return;
+        let current = 0;
+        setInterval(() => {
+            slides[current].classList.remove('is-active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('is-active');
+        }, 5000);
+    })();
 </script>
 </body>
 </html>

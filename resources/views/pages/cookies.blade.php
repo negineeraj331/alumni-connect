@@ -137,7 +137,7 @@
     <div class="max-w-[800px] mx-auto text-center relative z-10">
 <div class="mb-10 flex justify-center">
 <div class="relative w-48 h-48 md:w-64 md:h-64 rounded-full bg-primary-container flex items-center justify-center overflow-hidden dark:shadow-[0_0_20px_rgba(212,255,62,0.15)]">
-<img class="w-3/4 h-3/4 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFoJgR2q9K5yC7nF67HjUpxJ1l3X4Z3k7T5W7uK8hR9J7i3s9tF5w6K7l8R8j7y6t5e4d3c2b1a0"/>
+<img class="w-3/4 h-3/4 object-contain" src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1100&q=80"/>
 </div>
 </div>
 <h1 class="font-headline-lg text-headline-lg mb-6 text-on-surface dark:text-[#e3e3e3]">Cookie Policy</h1>

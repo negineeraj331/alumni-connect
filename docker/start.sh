@@ -21,9 +21,11 @@ php artisan config:cache
 php artisan route:cache
 php artisan view:cache
 
-# Database: apply pending migrations and ensure roles exist (both idempotent).
+# Database: apply pending migrations and seed roles + demo accounts.
+# DatabaseSeeder runs RoleSeeder then SampleDataSeeder; both are idempotent
+# (firstOrCreate), so this is safe to run on every container start.
 php artisan migrate --force
-php artisan db:seed --class=RoleSeeder --force
+php artisan db:seed --force
 php artisan storage:link || true
 
 # Bind Apache to the port Render assigns (defaults to 80 locally).

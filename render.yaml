@@ -22,9 +22,8 @@ services:
         sync: false
       - key: APP_DEBUG
         value: "false"
-      # NOTE: update this to the real Render URL once the service URL is known.
       - key: APP_URL
-        value: "https://alumni-connect.onrender.com"
+        value: "https://alumni-connect-o606.onrender.com"
       - key: LOG_CHANNEL
         value: "stderr"
       - key: LOG_LEVEL
@@ -62,7 +61,7 @@ services:
       - key: GOOGLE_CLIENT_SECRET
         sync: false
       - key: GOOGLE_REDIRECT_URI
-        value: "https://alumni-connect.onrender.com/auth/google/callback"
+        value: "https://alumni-connect-o606.onrender.com/auth/google/callback"
       - key: DB_CONNECTION
         value: "pgsql"
       - key: DB_HOST

@@ -143,7 +143,7 @@
                 </p>
 </div>
 <div class="flex-1 w-full max-w-[500px]">
-<img alt="Mentorship Guidance Illustration" class="w-full h-auto rounded-xl shadow-lg border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida/ADBb0ugZJjwufeZ2nRZQ5svxG5FvHI5umHq84x1Ee5UpWCj5caFhNUWqJQc5owAh0o9YSFqRcQ1D-cxyQjC4Pyeec7EOjMgTL2MUY_L6KUFvj4xOoz-dTWE6V9Cy4BMOUeUpJl_aYg1dOwPijX3ylXCkCAd7eFboO2P-5-JFU9QNILL5Q9phzhL-Xi8B4xEH-l1QqG7yG2ZGNxGb5xsc0W-BW-6kVkVmn0t0nrt2JSOf71tCN8sxgNhTXsWZSxYv"/>
+<img alt="Mentorship Guidance Illustration" class="w-full h-auto rounded-xl shadow-lg border border-outline-variant/30" src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1100&q=80"/>
 </div>
 </section>
 <!-- Core Guidelines Grid -->
