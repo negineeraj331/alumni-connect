@@ -6,18 +6,16 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ContactController;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::view('/', 'welcome')->name('welcome');
 
-// Static Pages
-Route::get('/about', function () { return view('pages.about'); })->name('about');
-Route::get('/privacy', function () { return view('pages.privacy'); })->name('privacy');
-Route::get('/terms', function () { return view('pages.terms'); })->name('terms');
-Route::get('/cookies', function () { return view('pages.cookies'); })->name('cookies');
-Route::get('/contact', function () { return view('pages.contact'); })->name('contact');
+// Static Pages — Route::view keeps these cacheable (no closures).
+Route::view('/about', 'pages.about')->name('about');
+Route::view('/privacy', 'pages.privacy')->name('privacy');
+Route::view('/terms', 'pages.terms')->name('terms');
+Route::view('/cookies', 'pages.cookies')->name('cookies');
+Route::view('/contact', 'pages.contact')->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
-Route::get('/guidelines', function () { return view('pages.guidelines'); })->name('guidelines');
+Route::view('/guidelines', 'pages.guidelines')->name('guidelines');
 
 // Authentication Routes
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -33,12 +31,7 @@ Route::get('auth/{provider}/callback', [OAuthController::class, 'callback'])->na
 
 // Protected Routes
 Route::middleware(['auth', 'active'])->group(function () {
-    Route::get('/dashboard', function () {
-        if (Auth::user()->hasRole('admin')) {
-            return redirect()->route('admin.index');
-        }
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
     Route::resource('profiles', \App\Http\Controllers\ProfileController::class)->only(['index', 'show', 'edit', 'update']);
 

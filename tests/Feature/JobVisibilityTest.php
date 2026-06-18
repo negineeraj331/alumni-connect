@@ -20,8 +20,8 @@ class JobVisibilityTest extends TestCase
     {
         parent::setUp();
         // Create basic roles
-        Role::create(['name' => 'student', 'description' => 'Student']);
-        Role::create(['name' => 'alumni', 'description' => 'Alumni']);
+        Role::create(['name' => 'student', 'display_name' => 'Student', 'description' => 'Student']);
+        Role::create(['name' => 'alumni', 'display_name' => 'Alumni', 'description' => 'Alumni']);
     }
 
     public function test_student_cannot_see_unconnected_jobs()

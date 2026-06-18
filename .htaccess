@@ -1,0 +1,10 @@
+# Render's native PHP runtime serves Apache with DocumentRoot at the repo root.
+# Laravel's front controller lives in public/, so rewrite all requests into it.
+# (Locally `php artisan serve` / Vite are used and ignore this file.)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Don't rewrite requests that already target the public/ directory.
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

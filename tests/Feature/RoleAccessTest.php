@@ -9,8 +9,15 @@ use App\Models\Role;
 
 class RoleAccessTest extends TestCase
 {
-    // We won't use RefreshDatabase because we want to test against the seeded data.
-    
+    use RefreshDatabase;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        // Seed roles and sample users so role-based access can be exercised.
+        $this->seed(\Database\Seeders\DatabaseSeeder::class);
+    }
+
     private function getRoleUser($roleName)
     {
         return User::whereHas('roles', function($q) use ($roleName) {

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', '{{ $event->title }} — Alumni Connect')
+@section('title', $event->title . ' — Alumni Connect')
 
 @section('content')
 <div class="max-w-4xl mx-auto">
@@ -84,7 +84,7 @@
                     Cancel RSVP
                 </button>
             </form>
-            @elseif($event->status === 'upcoming')
+            @elseif($event->status === 'active')
             <form action="{{ route('events.rsvp', $event->id) }}" method="POST">
                 @csrf
                 <input type="hidden" name="action" value="register">

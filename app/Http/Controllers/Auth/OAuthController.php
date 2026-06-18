@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Str;
@@ -27,11 +28,21 @@ class OAuthController extends Controller
 
         if (!$user) {
             $user = User::create([
-                'name' => $socialUser->getName() ?? $socialUser->getNickname(),
+                'name' => $socialUser->getName() ?? $socialUser->getNickname() ?? 'Member',
                 'email' => $socialUser->getEmail(),
                 'password' => bcrypt(Str::random(24)),
-                'role' => 'alumni', // default role
+                'is_active' => true,
             ]);
+
+            // Assign the default "alumni" role via the role_assignments pivot.
+            $alumniRoleId = Role::where('name', 'alumni')->value('id');
+            if ($alumniRoleId) {
+                $user->roles()->attach($alumniRoleId);
+            }
+        }
+
+        if (! $user->is_active) {
+            return redirect('/login')->withErrors(['oauth' => 'Your account has been deactivated. Please contact an administrator.']);
         }
 
         Auth::login($user, true);

@@ -15,7 +15,7 @@ class AdminController extends Controller
         $stats = [
             'total_users' => User::count(),
             'active_mentorships' => \App\Models\Mentorship::where('status', 'active')->count(),
-            'upcoming_events' => \App\Models\Event::where('status', 'upcoming')->count(),
+            'upcoming_events' => \App\Models\Event::where('status', 'active')->where('event_date', '>=', now())->count(),
             'pending_flags' => FlaggedContent::where('status', 'pending')->count(),
         ];
 
