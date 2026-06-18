@@ -7,10 +7,10 @@ databases:
 services:
   - type: web
     name: alumni-connect
-    env: php
+    runtime: docker
+    dockerfilePath: ./Dockerfile
     plan: free
-    buildCommand: "./build.sh"
-    startCommand: "apache2-foreground"
+    healthCheckPath: /up
     envVars:
       - key: APP_NAME
         value: "Alumni Connect"
